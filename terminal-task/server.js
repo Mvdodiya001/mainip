@@ -9,6 +9,17 @@ const http = require('http');
 
 dotenv.config({ path: path.join(__dirname, 'config.env') });
 
+const cron = require('node-cron');
+const { updateDataset } = require('./utils/datasetUpdater');
+
+// Schedule CVE dataset update
+// Run once on server start (non-blocking)
+updateDataset();
+// Schedule to run every day at midnight
+cron.schedule('0 0 * * *', () => {
+	updateDataset();
+});
+
 const app = express();
 const server = http.createServer(app);
 app.use(express.json());

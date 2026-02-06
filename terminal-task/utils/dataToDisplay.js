@@ -47,7 +47,7 @@ const ttlml = (data) => {
 	let cleanVersion = '';
 	if (data) {
 		const dataStr = String(data);
-		// Extract version number (e.g., "22" from ":22" or "['':22', 'Linux']")
+		// Extract version number (e.g., "22" from ":22" or "[':22', 'Linux']")
 		const versionMatch = dataStr.match(/:?(\d+(?:\.\d+)*)/);
 		if (versionMatch) {
 			cleanVersion = versionMatch[1];
