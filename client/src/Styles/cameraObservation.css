@@ -1,0 +1,46 @@
+.camera-observation-body {
+	flex: 1;
+}
+
+.color-change {
+	border-bottom-color: #fff;
+	width: 50%;
+}
+
+.select-camera-details {
+	display: flex;
+}
+
+.select-camera-details-text {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #1260cc;
+	margin-right: 1rem;
+}
+
+.select-camera-details-dropdown-select {
+	color: #1260cc;
+	padding: 0.2rem;
+	border-color: #1260cc;
+	outline: #1260cc;
+}
+
+.select-camera-details-dropdown > input {
+	color: #1260cc;
+	padding: 0.2rem;
+	border-color: #1260cc;
+	outline: #1260cc;
+	max-width: 5rem;
+}
+
+.select-camera-details > button {
+	margin-left: 1rem;
+	font-size: 1rem;
+	line-height: 1rem;
+	height: 2rem;
+	padding: 0.25rem 0.75rem;
+	border-color: #1260cc;
+	outline: none;
+	background-color: #1260cc;
+	color: #fff;
+}

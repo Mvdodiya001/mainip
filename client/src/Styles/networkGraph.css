@@ -1,0 +1,40 @@
+#graph-id-graph-wrapper {
+    height: 95%;
+    width: 100%;
+    overflow: auto;
+}
+
+#graph-id-graph-wrapper > svg {
+    height: 100% !important;
+    width: 100% !important;
+    overflow: auto;
+}
+
+#graph-id-graph-container-zoomable {
+    margin: auto;
+}
+
+/* #graph-id-graph-container-zoomable > .node > svg {
+    height: 100 !important;
+    width: 100 !important;
+}
+
+#graph-id-graph-container-zoomable > .node > svg > foreignObject {
+    display: block;
+    height: 100px !important;
+    width: 100px !important;
+}
+
+#graph-id-graph-container-zoomable > .node > svg > * > section {
+    height: fit-content !important;
+    width: fit-content !important;
+} */
+
+button {
+	border: none;
+	background-color: rgb(var(--bs-primary-rgb));
+	color: #fff;
+	padding: 0.5rem 1rem;
+	display: block;
+	margin-left: 2rem;
+}

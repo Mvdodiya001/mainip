@@ -1,0 +1,83 @@
+.page {
+	margin-left: 1.5rem;
+}
+
+.Heading {
+	color: #1260cc;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.cards {
+	width: 750px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 18rem;
+	margin-bottom: 1rem;
+}
+
+.card-header {
+	color: #0b0101;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f26c;
+	
+}
+
+.positive {
+	background-color: #1260cc;
+}
+
+.negative {
+	background-color: #ec5d87;
+}
+
+.report-data-unknown {
+	background-color: #515050;
+}
+
+.report-data-none, .report-data-info {
+	background-color: #20BF6B;
+}
+
+.report-data-low {
+	background-color: #F7B731;
+}
+
+.report-data-warn, .report-data-medium {
+	background-color: #F78C31;
+}
+
+.report-data-high {
+	background-color: #EB4D4B;
+}
+
+.report-data-critical {
+	background-color: #780000;
+}
+
+.list-group-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-dark {
+	color: #7147D7;
+	background-color: #7147D7;
+	border: #7147D7;
+}
+
+.button-download {
+	color: white;
+}
+
+.fa-cloud-arrow-down {
+	color: white;
+}

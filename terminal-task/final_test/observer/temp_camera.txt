@@ -1,0 +1,499 @@
+
+== Service global info: ==
+
+Number of camera devices: 4
+Number of normal camera devices: 4
+Number of public camera devices visible to API1: 4
+    Device 0 maps to "0"
+    Device 1 maps to "1"
+    Device 2 maps to "2"
+    Device 3 maps to "3"
+Active Camera Clients:
+[]
+Allowed user IDs: 0
+
+== Camera service events log (most recent at top): ==
+  10-07 11:57:21 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:57:20 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:57:20 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:57:19 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:57:13 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:57:12 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:57:06 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:57:05 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:57:00 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:59 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:54 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:53 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:47 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:46 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:41 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:40 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:35 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:34 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:29 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:28 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:23 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:22 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:17 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:16 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:11 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:10 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:56:05 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:56:04 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:59 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:58 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:53 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:52 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:47 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:47 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:42 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:41 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:36 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:35 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:30 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:29 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:24 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:24 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:24 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:23 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:20 : DISCONNECT device 4 client for package client.pid<1648> (PID 1648)
+  10-07 11:55:20 : REJECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121), reason: (Status(-8, EX_SERVICE_SPECIFIC): '8: connectHelper:2198: Too many cameras already open, cannot open camera "3"')
+  10-07 11:55:20 : DENIED connect device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, score 999 state 6) due to eviction policy
+   - Blocked by existing device 4 client for package client.pid<1648>(PID 1648, score 200, state 1)
+  10-07 11:55:17 : REJECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121), reason: (Status(-8, EX_SERVICE_SPECIFIC): '8: connectHelper:2198: Too many cameras already open, cannot open camera "3"')
+  10-07 11:55:17 : DENIED connect device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, score 999 state 6) due to eviction policy
+   - Blocked by existing device 4 client for package client.pid<1648>(PID 1648, score 200, state 1)
+  10-07 11:55:16 : CONNECT device 4 client for package client.pid<1648> (PID 1648, priority 200)
+  10-07 11:55:06 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:55:05 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:55:00 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:59 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:54 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:53 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:48 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:47 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:42 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:41 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:36 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:35 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:30 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:29 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:24 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:23 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:18 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:17 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:12 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:11 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:06 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:54:05 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:54:00 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:59 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:54 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:53 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:48 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:47 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:42 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:41 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:36 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:35 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:30 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:30 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:24 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:24 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:19 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:18 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:13 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:12 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:07 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:06 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:53:01 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:53:00 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:52:55 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:52:54 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:52:49 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:52:48 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  10-07 11:52:43 : DISCONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121)
+  10-07 11:52:42 : CONNECT device 3 client for package com.samsung.adaptivebrightnessgo (PID 3121, priority 999)
+  ...
+
+== Camera device 0 status 1 dynamic info: ==
+  Device 0 is closed, no client instance
+== Camera device 1 status 1 dynamic info: ==
+  Device 1 is closed, no client instance
+== Camera device 2 status 1 dynamic info: ==
+  Device 2 is closed, no client instance
+== Camera device 20 status 1 dynamic info: ==
+  Device 20 is closed, no client instance
+== Camera device 21 status 1 dynamic info: ==
+  Device 21 is closed, no client instance
+== Camera device 23 status 1 dynamic info: ==
+  Device 23 is closed, no client instance
+== Camera device 3 status 1 dynamic info: ==
+  Device 3 is closed, no client instance
+== Camera device 4 status 1 dynamic info: ==
+  Device 4 is closed, no client instance
+== Camera device 40 status 1 dynamic info: ==
+  Device 40 is closed, no client instance
+== Camera device 41 status 1 dynamic info: ==
+  Device 41 is closed, no client instance
+== Camera device 50 status 1 dynamic info: ==
+  Device 50 is closed, no client instance
+== Camera device 52 status 1 dynamic info: ==
+  Device 52 is closed, no client instance
+== Camera device 54 status 1 dynamic info: ==
+  Device 54 is closed, no client instance
+== Camera Provider HAL legacy/0-0 (v2.6, remote) static info: 13 devices: ==
+== Camera HAL device device@3.5/legacy/0 (v3.5) static information: ==
+  Resource cost: 100
+  Conflicting devices:
+    1
+    3
+    4
+    20
+    21
+    23
+  API1 info:
+    Has a flash unit: true
+    Facing: Back
+    Orientation: 90
+  API2 camera characteristics:
+    Dumping camera metadata array: 168 / 168 entries, 33776 / 33776 bytes of extra data.
+      Version: 1, Flags: 00000000
+      android.colorCorrection.availableAberrationModes (00004): byte[3]
+        [0 1 2 ]
+      android.control.aeAvailableAntibandingModes (10012): byte[4]
+        [0 1 2 3 ]
+      android.control.aeAvailableModes (10013): byte[4]
+        [0 1 2 3 ]
+      android.control.aeAvailableTargetFpsRanges (10014): int32[10]
+        [7 10 10 10 ]
+        [15 15 7 30 ]
+        [30 30 ]
+      android.control.aeCompensationRange (10015): int32[2]
+        [-20 20 ]
+      android.control.aeCompensationStep (10016): rational[1]
+        [(1 / 10) ]
+      android.control.afAvailableModes (10017): byte[5]
+        [0 1 2 3 4 ]
+      android.control.availableEffects (10018): byte[9]
+        [0 1 2 3 4 5 8 7 6 ]
+      android.control.availableSceneModes (10019): byte[16]
+        [0 1 2 3 4 5 6 7 8 9 10 12 13 14 15 18 ]
+      android.control.availableVideoStabilizationModes (1001a): byte[2]
+        [0 1 ]
+      android.control.awbAvailableModes (1001b): byte[9]
+        [1 2 3 4 5 6 7 8 0 ]
+      android.control.maxRegions (1001c): int32[3]
+        [1 0 1 ]
+      android.control.sceneModeOverrides (1001d): byte[48]
+        [1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 ]
+        [1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 ]
+        [0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 ]
+      android.control.availableHighSpeedVideoConfigurations (10023): int32[10]
+        [1280 720 30 120 ]
+        [4 1280 720 120 ]
+        [120 2 ]
+      android.control.aeLockAvailable (10024): byte[1]
+        [TRUE ]
+      android.control.awbLockAvailable (10025): byte[1]
+        [TRUE ]
+      android.control.availableModes (10026): byte[3]
+        [0 1 2 ]
+      android.control.postRawSensitivityBoostRange (10027): int32[2]
+        [100 3199 ]
+      android.edge.availableEdgeModes (30002): byte[4]
+        [1 2 0 3 ]
+      android.flash.info.available (50000): byte[1]
+        [TRUE ]
+      android.hotPixel.availableHotPixelModes (60001): byte[3]
+        [0 1 2 ]
+      android.jpeg.availableThumbnailSizes (70007): int32[20]
+        [0 0 176 144 ]
+        [240 144 256 144 ]
+        [240 160 256 154 ]
+        [246 184 240 240 ]
+        [320 240 320 320 ]
+      android.jpeg.maxSize (70008): int32[1]
+        [149817608 ]
+      android.lens.info.availableApertures (90000): float[1]
+        [1.79999995 ]
+      android.lens.info.availableFilterDensities (90001): float[1]
+        [0.00000000 ]
+      android.lens.info.availableFocalLengths (90002): float[1]
+        [4.00000000 ]
+      android.lens.info.availableOpticalStabilization (90003): byte[2]
+        [0 1 ]
+      android.lens.info.hyperfocalDistance (90004): float[1]
+        [0.14399999 ]
+      android.lens.info.minimumFocusDistance (90005): float[1]
+        [10.00000000 ]
+      android.lens.info.shadingMapSize (90006): int32[2]
+        [17 13 ]
+      android.lens.info.focusDistanceCalibration (90007): byte[1]
+        [APPROXIMATE ]
+      android.lens.facing (80005): byte[1]
+        [BACK ]
+      android.noiseReduction.availableNoiseReductionModes (a0002): byte[5]
+        [0 1 2 3 4 ]
+      android.request.maxNumOutputStreams (c0006): int32[3]
+        [1 3 2 ]
+      android.request.maxNumInputStreams (c0008): int32[1]
+        [1 ]
+      android.request.pipelineMaxDepth (c000a): byte[1]
+        [8 ]
+      android.request.partialResultCount (c000b): int32[1]
+        [2 ]
+      android.request.availableCapabilities (c000c): byte[9]
+        [BACKWARD_COMPATIBLE CONSTRAINED_HIGH_SPEED_VIDEO RAW YUV_REPROCESSING PRIVATE_REPROCESSING READ_SENSOR_SETTINGS MANUAL_SENSOR BURST_CAPTURE MANUAL_POST_PROCESSING ]
+      android.request.availableRequestKeys (c000d): int32[61]
+        [0 1 2 3 ]
+        [65536 65537 65538 65539 ]
+        [65540 65541 65542 65543 ]
+        [65544 65545 65546 65547 ]
+        [65549 65550 65551 65552 ]
+        [65553 65576 65577 196608 ]
+        [262146 393216 458752 458753 ]
+        [458754 458755 458756 458757 ]
+        [458758 524288 524289 524290 ]
+        [524291 524292 655360 786433 ]
+        [851968 917504 917505 917506 ]
+        [917520 917532 917533 1048576 ]
+        [1114112 1114115 1114128 1245184 ]
+        [1245185 1245186 1245187 1441792 ]
+        [524301 524294 524295 524298 ]
+        [65583 ]
+      android.request.availableResultKeys (c000e): int32[62]
+        [0 1 2 65539 ]
+        [65540 65567 65543 65544 ]
+        [65568 65547 65570 65551 ]
+        [65576 65577 196608 262146 ]
+        [262149 458752 458753 458754 ]
+        [458755 458756 458757 458758 ]
+        [524288 524289 524290 524291 ]
+        [524296 524297 524292 655360 ]
+        [786433 851968 917526 917523 ]
+        [917504 917505 917506 917520 ]
+        [917532 917533 917522 917525 ]
+        [1048576 1114112 1114121 1114124 ]
+        [1114125 1114126 1114118 1114119 ]
+        [1245184 1245185 1245186 1245187 ]
+        [1441792 524301 524294 524295 ]
+        [524298 65583 ]
+      android.request.availableCharacteristicsKeys (c000f): int32[97]
+        [4 65554 65555 65556 ]
+        [65557 65558 65559 65560 ]
+        [65561 65562 65563 65564 ]
+        [65565 65571 65572 65573 ]
+        [65574 65575 65577 1638402 ]
+        [1638401 1638403 196610 327680 ]
+        [393217 458759 458760 589824 ]
+        [589825 589826 589827 589828 ]
+        [589829 589830 589831 524293 ]
+        [1703936 1703937 655362 786438 ]
+        [786440 786442 786443 786444 ]
+        [786445 786446 786447 786448 ]
+        [851972 851977 851978 851979 ]
+        [851980 851981 983040 917526 ]
+        [917523 917534 983041 983042 ]
+        [983043 983044 983045 983046 ]
+        [983047 983048 983049 983050 ]
+        [917507 917508 917509 917510 ]
+        [917511 917512 917513 917514 ]
+        [917516 917517 917518 917519 ]
+        [917529 1048578 1179648 1179650 ]
+        [1179654 1179655 1245188 1245189 ]
+        [1376256 1507329 1572865 524300 ]
+        [524301 524295 524294 524298 ]
+        [65582 ]
+      android.request.availableSessionKeys (c0010): int32[1]
+        [65541 ]
+      android.scaler.availableMaxDigitalZoom (d0004): float[1]
+        [8.00000000 ]
+      android.scaler.availableInputOutputFormatsMap (d0009): int32[8]
+        [34 2 35 33 ]
+        [35 2 35 33 ]
+      android.scaler.availableStreamConfigurations (d000a): int32[200]
+        [34 4080 3060 OUTPUT ]
+        [34 4080 3060 INPUT ]
+        [35 4080 3060 OUTPUT ]
+        [35 4080 3060 INPUT ]
+        [33 4080 3060 OUTPUT ]
+        [34 4080 2296 OUTPUT ]
+        [35 4080 2296 OUTPUT ]
+        [33 4080 2296 OUTPUT ]
+        [34 4080 1836 OUTPUT ]
+        [35 4080 1836 OUTPUT ]
+        [33 4080 1836 OUTPUT ]
+        [34 3056 3056 OUTPUT ]
+        [35 3056 3056 OUTPUT ]
+        [33 3056 3056 OUTPUT ]
+        [34 1920 1080 OUTPUT ]
+        [35 1920 1080 OUTPUT ]
+        [33 1920 1080 OUTPUT ]
+        [34 1920 888 OUTPUT ]
+        [35 1920 888 OUTPUT ]
+        [33 1920 888 OUTPUT ]
+        [34 1440 1440 OUTPUT ]
+        [35 1440 1440 OUTPUT ]
+        [33 1440 1440 OUTPUT ]
+        [34 1440 1080 OUTPUT ]
+        [35 1440 1080 OUTPUT ]
+        [33 1440 1080 OUTPUT ]
+        [34 1280 720 OUTPUT ]
+        [35 1280 720 OUTPUT ]
+        [33 1280 720 OUTPUT ]
+        [34 960 720 OUTPUT ]
+        [35 960 720 OUTPUT ]
+        [33 960 720 OUTPUT ]
+        [34 720 480 OUTPUT ]
+        [35 720 480 OUTPUT ]
+        [33 720 480 OUTPUT ]
+        [34 640 480 OUTPUT ]
+        [35 640 480 OUTPUT ]
+        [33 640 480 OUTPUT ]
+        [34 352 288 OUTPUT ]
+        [35 352 288 OUTPUT ]
+        [33 352 288 OUTPUT ]
+        [34 320 240 OUTPUT ]
+        [35 320 240 OUTPUT ]
+        [33 320 240 OUTPUT ]
+        [34 176 144 OUTPUT ]
+        [35 176 144 OUTPUT ]
+        [33 176 144 OUTPUT ]
+        [37 4080 3060 OUTPUT ]
+        [32 4080 3060 OUTPUT ]
+        [36 4080 3060 OUTPUT ]
+      android.scaler.availableMinFrameDurations (d000b): int64[192]
+        [34 4080 ]
+        [3060 66666666 ]
+        [35 4080 ]
+        [3060 66666666 ]
+        [33 4080 ]
+        [3060 66666666 ]
+        [34 4080 ]
+        [2296 66666666 ]
+        [35 4080 ]
+        [2296 66666666 ]
+        [33 4080 ]
+        [2296 66666666 ]
+        [34 4080 ]
+        [1836 66666666 ]
+        [35 4080 ]
+        [1836 66666666 ]
+        [33 4080 ]
+        [1836 66666666 ]
+        [34 3056 ]
+        [3056 66666666 ]
+        [35 3056 ]
+        [3056 66666666 ]
+        [33 3056 ]
+        [3056 66666666 ]
+        [34 1920 ]
+        [1080 33333333 ]
+        [35 1920 ]
+        [1080 33333333 ]
+        [33 1920 ]
+        [1080 33333333 ]
+        [34 1920 ]
+        [888 33333333 ]
+        [35 1920 ]
+        [888 33333333 ]
+        [33 1920 ]
+        [888 33333333 ]
+        [34 1440 ]
+        [1440 33333333 ]
+        [35 1440 ]
+        [1440 33333333 ]
+        [33 1440 ]
+        [1440 33333333 ]
+        [34 1440 ]
+        [1080 33333333 ]
+        [35 1440 ]
+        [1080 33333333 ]
+        [33 1440 ]
+        [1080 33333333 ]
+        [34 1280 ]
+        [720 33333333 ]
+        [35 1280 ]
+        [720 33333333 ]
+        [33 1280 ]
+        [720 33333333 ]
+        [34 960 ]
+        [720 33333333 ]
+        [35 960 ]
+        [720 33333333 ]
+        [33 960 ]
+        [720 33333333 ]
+        [34 720 ]
+        [480 33333333 ]
+        [35 720 ]
+        [480 33333333 ]
+        [33 720 ]
+        [480 33333333 ]
+        [34 640 ]
+        [480 33333333 ]
+        [35 640 ]
+        [480 33333333 ]
+        [33 640 ]
+        [480 33333333 ]
+        [34 352 ]
+        [288 33333333 ]
+        [35 352 ]
+        [288 33333333 ]
+        [33 352 ]
+        [288 33333333 ]
+        [34 320 ]
+        [240 33333333 ]
+        [35 320 ]
+        [240 33333333 ]
+        [33 320 ]
+        [240 33333333 ]
+        [34 176 ]
+        [144 33333333 ]
+        [35 176 ]
+        [144 33333333 ]
+        [33 176 ]
+        [144 33333333 ]
+        [37 4080 ]
+        [3060 33333333 ]
+        [32 4080 ]
+        [3060 33333333 ]
+        [36 4080 ]
+        [3060 33333333 ]
+      android.scaler.availableStallDurations (d000c): int64[60]
+        [33 4080 ]
+        [3060 81151200 ]
+        [33 4080 ]
+        [2296 60889920 ]
+        [33 4080 ]
+        [1836 48690720 ]
+        [33 3056 ]
+        [3056 60704384 ]
+        [33 1920 ]
+        [1080 13478400 ]
+        [33 1920 ]
+        [888 11082240 ]
+        [33 1440 ]
+        [1440 13478400 ]
+        [33 1440 ]
+        [1080 10108800 ]
+        [33 1280 ]
+        [720 5990400 ]
+        [33 960 ]
+        [720 4492800 ]
+        [33 720 ]
+        [480 2246400 ]
+        [33 640 ]
+        [480 1996800 ]
+        [33 352 ]
+        [288 658944 ]
+        [33 320 ]
+        [240 499200 ]
+        [33 176 ]
+        [144 164736 ]
+      android.scaler.croppingType (d000d): byte[1]
+        [CENTER_ONLY ]
+      android.sensor.info.activeArraySize (f0000): int32[4]
+        [0 0 4080 3060 ]
+      android.sensor.opaqueRawSize (e001e): int32[3]

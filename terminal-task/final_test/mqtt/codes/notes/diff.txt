@@ -1,0 +1,7 @@
+Paho MQTT and Mosquitto MQTT are both popular implementations of the MQTT (Message Queue Telemetry Transport) protocol, but they differ in a few key ways.
+
+Paho MQTT is an MQTT client library written in multiple programming languages, including C, C++, Java, Python, and JavaScript. It was developed by the Eclipse Foundation and provides a high-level API for developers to create MQTT clients for their applications. Paho MQTT is designed to be lightweight and easy to use, making it a popular choice for many IoT applications.
+
+Mosquitto MQTT, on the other hand, is an MQTT broker, which means it provides a central hub for MQTT clients to connect to and exchange messages. Mosquitto is written in C and is designed to be lightweight, efficient, and easy to set up. It is open-source software and is widely used in many IoT applications and projects.
+
+So, in summary, Paho MQTT is a client library that developers can use to create MQTT clients for their applications, while Mosquitto MQTT is an MQTT broker that provides a central hub for MQTT clients to connect to and exchange messages.

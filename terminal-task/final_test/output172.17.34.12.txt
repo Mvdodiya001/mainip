@@ -1,0 +1,2 @@
+PORT     STATE SERVICE VERSION
+5040/tcp open  unknown

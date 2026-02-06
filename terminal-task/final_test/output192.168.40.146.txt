@@ -1,0 +1,2 @@
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  dnsmasq 2.51

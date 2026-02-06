@@ -1,0 +1,103 @@
+.pcap-uploader {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.pcap-uploader h2 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.file-drop-area {
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-drop-area:hover {
+    border-color: #4a5568;
+    background-color: #f7fafc;
+}
+
+.file-drop-area p {
+    margin-top: 1rem;
+    color: #4a5568;
+}
+
+.upload-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+    background-color: #3182ce;
+}
+
+.upload-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+}
+
+.url-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.url-container h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.coap-entity {
+    background-color: #edf2f7;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+}
+
+.coap-entity pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.coap-client {
+    border-left: 4px solid #48bb78;
+}
+
+.success-alert {
+    background-color: #c6f6d5;
+    color: #2f855a;
+}
+
+@media (max-width: 768px) {
+    .pcap-uploader {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}

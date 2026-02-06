@@ -1,0 +1,2203 @@
+{
+    "target": "192.168.1.250",
+    "nmap_results": [
+        {
+            "Rank": "1",
+            "Server Version": "Apache2.4.54",
+            "Score": "102",
+            "Hits": "41"
+        },
+        {
+            "Rank": "2",
+            "Server Version": "Apache1.3.26",
+            "Score": "74",
+            "Hits": "32"
+        },
+        {
+            "Rank": "3",
+            "Server Version": "Apache1.3.37",
+            "Score": "72",
+            "Hits": "30"
+        },
+        {
+            "Rank": "4",
+            "Server Version": "Zope2.7.5",
+            "Score": "71",
+            "Hits": "29"
+        },
+        {
+            "Rank": "5",
+            "Server Version": "AOLserver3.4.2",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "6",
+            "Server Version": "Apache2.2.3",
+            "Score": "70",
+            "Hits": "28"
+        },
+        {
+            "Rank": "7",
+            "Server Version": "Caudium1.4.9",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "8",
+            "Server Version": "MicrosoftIIS5.0",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "9",
+            "Server Version": "MicrosoftIIS6.0",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "10",
+            "Server Version": "RicohAficio1022Web-Server3.0",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "11",
+            "Server Version": "RicohAficio10455.23Web-Server3.0",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "12",
+            "Server Version": "RicohAficio10603.53.3Web-Server3.0",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "13",
+            "Server Version": "RicohAficio60023.53.3Web-Server3.0",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "14",
+            "Server Version": "UserLandFrontier9.0.1",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "15",
+            "Server Version": "UserLandFrontier9.5",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "16",
+            "Server Version": "Zope2.7.4",
+            "Score": "70",
+            "Hits": "30"
+        },
+        {
+            "Rank": "17",
+            "Server Version": "Apache2.0.54",
+            "Score": "69",
+            "Hits": "29"
+        },
+        {
+            "Rank": "18",
+            "Server Version": "Zope2.7.7",
+            "Score": "69",
+            "Hits": "29"
+        },
+        {
+            "Rank": "19",
+            "Server Version": "Anti-WebHTTPD4.0beta13",
+            "Score": "68",
+            "Hits": "28"
+        },
+        {
+            "Rank": "20",
+            "Server Version": "Apache1.3.27",
+            "Score": "68",
+            "Hits": "28"
+        },
+        {
+            "Rank": "21",
+            "Server Version": "Cherokee0.6.0",
+            "Score": "68",
+            "Hits": "28"
+        },
+        {
+            "Rank": "22",
+            "Server Version": "nginx0.5.31",
+            "Score": "68",
+            "Hits": "28"
+        },
+        {
+            "Rank": "23",
+            "Server Version": "OracleApplicationServer9i9.0.3.1",
+            "Score": "68",
+            "Hits": "28"
+        },
+        {
+            "Rank": "24",
+            "Server Version": "Zeus4.3",
+            "Score": "68",
+            "Hits": "29"
+        },
+        {
+            "Rank": "25",
+            "Server Version": "Roxen4.5.145",
+            "Score": "68",
+            "Hits": "28"
+        },
+        {
+            "Rank": "26",
+            "Server Version": "Zeus4.41",
+            "Score": "68",
+            "Hits": "28"
+        },
+        {
+            "Rank": "27",
+            "Server Version": "OracleApplicationServer10g10.1.2.0.2",
+            "Score": "67",
+            "Hits": "29"
+        },
+        {
+            "Rank": "28",
+            "Server Version": "Apache2.2.6",
+            "Score": "67",
+            "Hits": "29"
+        },
+        {
+            "Rank": "29",
+            "Server Version": "Zope2.9.7",
+            "Score": "67",
+            "Hits": "27"
+        },
+        {
+            "Rank": "30",
+            "Server Version": "Apache1.3.34",
+            "Score": "66",
+            "Hits": "26"
+        },
+        {
+            "Rank": "31",
+            "Server Version": "HTTPi1.5.2",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "32",
+            "Server Version": "HTTPi1.6.1",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "33",
+            "Server Version": "LiteSpeedWebServer3.3",
+            "Score": "66",
+            "Hits": "26"
+        },
+        {
+            "Rank": "34",
+            "Server Version": "NetscapeEnterpriseServer6.0",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "35",
+            "Server Version": "Zope2.8.0",
+            "Score": "66",
+            "Hits": "26"
+        },
+        {
+            "Rank": "36",
+            "Server Version": "Zope2.8.4",
+            "Score": "66",
+            "Hits": "26"
+        },
+        {
+            "Rank": "37",
+            "Server Version": "Zope2.8.6",
+            "Score": "66",
+            "Hits": "26"
+        },
+        {
+            "Rank": "38",
+            "Server Version": "Zope2.9.6",
+            "Score": "66",
+            "Hits": "26"
+        },
+        {
+            "Rank": "39",
+            "Server Version": "4DWebSTAR3.0.2",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "40",
+            "Server Version": "Cherokee0.99",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "41",
+            "Server Version": "webcamXPPRO20062.16.456xBETA",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "42",
+            "Server Version": "webcamXPPRO20062.20.024",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "43",
+            "Server Version": "webcamXPPRO20062.37.144",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "44",
+            "Server Version": "webcamXPPRO20073.60.220",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "45",
+            "Server Version": "webcamXPPRO20073.72.440",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "46",
+            "Server Version": "webcamXPPRO20073.96.000beta",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "47",
+            "Server Version": "WEBrick1.3.1",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "48",
+            "Server Version": "Yaws1.65",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "49",
+            "Server Version": "Yaws1.68",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "50",
+            "Server Version": "Yaws1.72",
+            "Score": "66",
+            "Hits": "28"
+        },
+        {
+            "Rank": "51",
+            "Server Version": "Apache1.3.33",
+            "Score": "65",
+            "Hits": "27"
+        },
+        {
+            "Rank": "52",
+            "Server Version": "Apache2.2.2",
+            "Score": "65",
+            "Hits": "27"
+        },
+        {
+            "Rank": "53",
+            "Server Version": "MicrosoftIIS5.1",
+            "Score": "65",
+            "Hits": "29"
+        },
+        {
+            "Rank": "54",
+            "Server Version": "Apache2.0.59",
+            "Score": "64",
+            "Hits": "27"
+        },
+        {
+            "Rank": "55",
+            "Server Version": "Apache2.0.46",
+            "Score": "64",
+            "Hits": "28"
+        },
+        {
+            "Rank": "56",
+            "Server Version": "Apache2.0.51",
+            "Score": "64",
+            "Hits": "28"
+        },
+        {
+            "Rank": "57",
+            "Server Version": "Apache2.2.4",
+            "Score": "64",
+            "Hits": "28"
+        },
+        {
+            "Rank": "58",
+            "Server Version": "IceWarp8.3.0",
+            "Score": "64",
+            "Hits": "26"
+        },
+        {
+            "Rank": "59",
+            "Server Version": "Zope2.7.6",
+            "Score": "64",
+            "Hits": "27"
+        },
+        {
+            "Rank": "60",
+            "Server Version": "AOLserver4.0.10",
+            "Score": "64",
+            "Hits": "25"
+        },
+        {
+            "Rank": "61",
+            "Server Version": "AOLserver4.5.0",
+            "Score": "64",
+            "Hits": "25"
+        },
+        {
+            "Rank": "62",
+            "Server Version": "Apache1.3.31",
+            "Score": "63",
+            "Hits": "27"
+        },
+        {
+            "Rank": "63",
+            "Server Version": "Apache1.3.39",
+            "Score": "63",
+            "Hits": "27"
+        },
+        {
+            "Rank": "64",
+            "Server Version": "OracleApplicationServer9i9.0.2",
+            "Score": "63",
+            "Hits": "27"
+        },
+        {
+            "Rank": "65",
+            "Server Version": "4DWebSTAR2.1.1",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "66",
+            "Server Version": "AOLserver4.0.10a",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "67",
+            "Server Version": "SnapStreamDigitalVideoRecorder",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "68",
+            "Server Version": "4DWebSTAR4.2",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "69",
+            "Server Version": "4DWebSTAR4.5",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "70",
+            "Server Version": "4DWebSTAR5.3.3",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "71",
+            "Server Version": "4DWebSTAR5.4.0",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "72",
+            "Server Version": "AllegroServe1.2.50",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "73",
+            "Server Version": "FlexWATCHFW-3440-B",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "74",
+            "Server Version": "Jigsaw2.2.6",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "75",
+            "Server Version": "Nanoweb2.2.10",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "76",
+            "Server Version": "Net2PhoneRapidLogic1.1",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "77",
+            "Server Version": "nginx0.5.19",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "78",
+            "Server Version": "nginx0.5.32",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "79",
+            "Server Version": "Orion2.0.7",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "80",
+            "Server Version": "Roxen2.2.213",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "81",
+            "Server Version": "XeroxPhaser8200",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "82",
+            "Server Version": "XeroxPhaser860",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "83",
+            "Server Version": "Yaws6.0.5",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "84",
+            "Server Version": "Zope2.5.0",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "85",
+            "Server Version": "Zope2.6.4",
+            "Score": "62",
+            "Hits": "26"
+        },
+        {
+            "Rank": "86",
+            "Server Version": "OracleApplicationServer10g10.1.2.2.0",
+            "Score": "61",
+            "Hits": "27"
+        },
+        {
+            "Rank": "87",
+            "Server Version": "Apache2.0.45",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "88",
+            "Server Version": "Apache2.0.48",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "89",
+            "Server Version": "Apache2.0.50",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "90",
+            "Server Version": "Apache2.0.52",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "91",
+            "Server Version": "Apache2.2.8",
+            "Score": "61",
+            "Hits": "26"
+        },
+        {
+            "Rank": "92",
+            "Server Version": "BadBlue2.4",
+            "Score": "61",
+            "Hits": "27"
+        },
+        {
+            "Rank": "93",
+            "Server Version": "BadBlue2.5",
+            "Score": "61",
+            "Hits": "27"
+        },
+        {
+            "Rank": "94",
+            "Server Version": "BadBlue2.6",
+            "Score": "61",
+            "Hits": "27"
+        },
+        {
+            "Rank": "95",
+            "Server Version": "Boa0.94.14rc21",
+            "Score": "61",
+            "Hits": "26"
+        },
+        {
+            "Rank": "96",
+            "Server Version": "bozohttpd20060517",
+            "Score": "61",
+            "Hits": "27"
+        },
+        {
+            "Rank": "97",
+            "Server Version": "bozohttpd20080303",
+            "Score": "61",
+            "Hits": "27"
+        },
+        {
+            "Rank": "98",
+            "Server Version": "SunONEWebServer6.1",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "99",
+            "Server Version": "thttpd2.23beta1",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "100",
+            "Server Version": "thttpd2.26",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "101",
+            "Server Version": "nginx0.5.30",
+            "Score": "61",
+            "Hits": "25"
+        },
+        {
+            "Rank": "102",
+            "Server Version": "eMule0.48a",
+            "Score": "60",
+            "Hits": "28"
+        },
+        {
+            "Rank": "103",
+            "Server Version": "eMule0.49c",
+            "Score": "60",
+            "Hits": "28"
+        },
+        {
+            "Rank": "104",
+            "Server Version": "WDaemon9.6.1",
+            "Score": "60",
+            "Hits": "24"
+        },
+        {
+            "Rank": "105",
+            "Server Version": "AOLserver3.5.0",
+            "Score": "60",
+            "Hits": "25"
+        },
+        {
+            "Rank": "106",
+            "Server Version": "SonySNC-RZ30NetEVI1.09",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "107",
+            "Server Version": "SonySNC-RZ30NetEVI2.05g",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "108",
+            "Server Version": "SonySNC-RZ30NetEVI2.05",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "109",
+            "Server Version": "SonySNC-RZ30NetEVI2.06",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "110",
+            "Server Version": "SonySNC-RZ30NetEVI2.13",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "111",
+            "Server Version": "SonySNC-RZ30NetEVI2.14",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "112",
+            "Server Version": "SonySNC-RZ30NetEVI2.24",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "113",
+            "Server Version": "SonySNC-RZ30NetEVI3.01",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "114",
+            "Server Version": "SonySNC-RZ30NetEVI3.02",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "115",
+            "Server Version": "SonySNC-RZ30NetEVI3.03",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "116",
+            "Server Version": "SonySNC-RZ30NetEVI3.10a",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "117",
+            "Server Version": "SonySNC-RZ30NetEVI3.10",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "118",
+            "Server Version": "SonySNC-RZ30NetEVI3.14",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "119",
+            "Server Version": "SonySNC-Z20NetZoom1.00",
+            "Score": "60",
+            "Hits": "26"
+        },
+        {
+            "Rank": "120",
+            "Server Version": "Abyss2.0.0.20X2",
+            "Score": "60",
+            "Hits": "24"
+        },
+        {
+            "Rank": "121",
+            "Server Version": "Jigsaw2.3.0-beta1",
+            "Score": "60",
+            "Hits": "24"
+        },
+        {
+            "Rank": "122",
+            "Server Version": "SunJavaSystemWebServer7.0",
+            "Score": "60",
+            "Hits": "24"
+        },
+        {
+            "Rank": "123",
+            "Server Version": "Apache2.4.1",
+            "Score": "59",
+            "Hits": "25"
+        },
+        {
+            "Rank": "124",
+            "Server Version": "Apache2.4.41",
+            "Score": "59",
+            "Hits": "25"
+        },
+        {
+            "Rank": "125",
+            "Server Version": "Mathopd1.5p6",
+            "Score": "59",
+            "Hits": "26"
+        },
+        {
+            "Rank": "126",
+            "Server Version": "nostromo1.9.1",
+            "Score": "59",
+            "Hits": "26"
+        },
+        {
+            "Rank": "127",
+            "Server Version": "OracleApplicationServer10g10.1.2.0.0",
+            "Score": "59",
+            "Hits": "25"
+        },
+        {
+            "Rank": "128",
+            "Server Version": "Resin3.0.6",
+            "Score": "59",
+            "Hits": "26"
+        },
+        {
+            "Rank": "129",
+            "Server Version": "Virtuoso5.0.3",
+            "Score": "59",
+            "Hits": "23"
+        },
+        {
+            "Rank": "130",
+            "Server Version": "GoogleWebServer2.1",
+            "Score": "59",
+            "Hits": "23"
+        },
+        {
+            "Rank": "131",
+            "Server Version": "IBMHTTPServer6.1.0.19",
+            "Score": "59",
+            "Hits": "25"
+        },
+        {
+            "Rank": "132",
+            "Server Version": "Zope2.10.4",
+            "Score": "59",
+            "Hits": "23"
+        },
+        {
+            "Rank": "133",
+            "Server Version": "Zope2.8.2",
+            "Score": "59",
+            "Hits": "23"
+        },
+        {
+            "Rank": "134",
+            "Server Version": "Zope2.9.2",
+            "Score": "59",
+            "Hits": "23"
+        },
+        {
+            "Rank": "135",
+            "Server Version": "Zope2.9.8",
+            "Score": "59",
+            "Hits": "23"
+        },
+        {
+            "Rank": "136",
+            "Server Version": "fnord1.8a",
+            "Score": "58",
+            "Hits": "24"
+        },
+        {
+            "Rank": "137",
+            "Server Version": "Divar1.00",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "138",
+            "Server Version": "Divar1.10.538.0",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "139",
+            "Server Version": "Divar1.11.626.0",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "140",
+            "Server Version": "Divar1.12.649.0",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "141",
+            "Server Version": "LotusDominoGoWebserver4.6.2.5",
+            "Score": "58",
+            "Hits": "26"
+        },
+        {
+            "Rank": "142",
+            "Server Version": "OracleApplicationServer10g10.1.3.1.0",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "143",
+            "Server Version": "publicfile",
+            "Score": "58",
+            "Hits": "27"
+        },
+        {
+            "Rank": "144",
+            "Server Version": "XeroxDocuPrintN4025AllegroRomPager3.06b1",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "145",
+            "Server Version": "ZyxelP-2602HW-D1ARomPager4.51",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "146",
+            "Server Version": "ZyxelP-661H-D1RomPager4.51",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "147",
+            "Server Version": "ZyxelP-662HW-D1RomPager4.51",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "148",
+            "Server Version": "ZyxelPrestige662H-61RomPager4.07",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "150",
+            "Server Version": "ZyxelZyWALL10WRomPager4.07",
+            "Score": "58",
+            "Hits": "25"
+        },
+        {
+            "Rank": "151",
+            "Server Version": "AOLserver4.0.11a",
+            "Score": "58",
+            "Hits": "23"
+        },
+        {
+            "Rank": "152",
+            "Server Version": "CL-HTTP70.216",
+            "Score": "58",
+            "Hits": "22"
+        },
+        {
+            "Rank": "153",
+            "Server Version": "nginx0.5.35",
+            "Score": "58",
+            "Hits": "22"
+        },
+        {
+            "Rank": "154",
+            "Server Version": "Zope2.6.1",
+            "Score": "58",
+            "Hits": "22"
+        },
+        {
+            "Rank": "155",
+            "Server Version": "Zope2.7.8",
+            "Score": "58",
+            "Hits": "22"
+        },
+        {
+            "Rank": "156",
+            "Server Version": "Zope2.8.7",
+            "Score": "58",
+            "Hits": "22"
+        },
+        {
+            "Rank": "157",
+            "Server Version": "Zope2.9.3",
+            "Score": "58",
+            "Hits": "22"
+        },
+        {
+            "Rank": "158",
+            "Server Version": "Zope2.9.5",
+            "Score": "58",
+            "Hits": "22"
+        },
+        {
+            "Rank": "159",
+            "Server Version": "Boa0.93.15",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "160",
+            "Server Version": "QNAPTS-1012.0.1.0302",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "161",
+            "Server Version": "QNAPTS-1012.1.0.612T",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "162",
+            "Server Version": "QNAPTS-101TurboStation1.2.0.0629",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "163",
+            "Server Version": "QNAPTS-1091.1.3.1101T",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "164",
+            "Server Version": "VSWebServer01.00.00",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "165",
+            "Server Version": "Abyss2.4.0.3X2",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "166",
+            "Server Version": "Abyss2.5.0.0X1",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "167",
+            "Server Version": "Abyss2.5.0.0X2",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "168",
+            "Server Version": "Abyss2.6.0.0X2",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "169",
+            "Server Version": "Apache1.2.6",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "170",
+            "Server Version": "Apache2.0.53",
+            "Score": "57",
+            "Hits": "24"
+        },
+        {
+            "Rank": "171",
+            "Server Version": "CompaqHTTPServer9.9",
+            "Score": "57",
+            "Hits": "26"
+        },
+        {
+            "Rank": "172",
+            "Server Version": "lighttpd1.4.19",
+            "Score": "57",
+            "Hits": "25"
+        },
+        {
+            "Rank": "173",
+            "Server Version": "NovellAccessManager3",
+            "Score": "56",
+            "Hits": "24"
+        },
+        {
+            "Rank": "174",
+            "Server Version": "Zope2.5.1",
+            "Score": "56",
+            "Hits": "24"
+        },
+        {
+            "Rank": "175",
+            "Server Version": "and-httpd0.99.11",
+            "Score": "56",
+            "Hits": "24"
+        },
+        {
+            "Rank": "176",
+            "Server Version": "Apache2.0.55",
+            "Score": "56",
+            "Hits": "24"
+        },
+        {
+            "Rank": "177",
+            "Server Version": "StWeb1.3.27",
+            "Score": "56",
+            "Hits": "24"
+        },
+        {
+            "Rank": "178",
+            "Server Version": "VMwareESXwebserver",
+            "Score": "56",
+            "Hits": "25"
+        },
+        {
+            "Rank": "179",
+            "Server Version": "Zope2.6.0",
+            "Score": "56",
+            "Hits": "26"
+        },
+        {
+            "Rank": "180",
+            "Server Version": "WNServer2.4.7",
+            "Score": "56",
+            "Hits": "21"
+        },
+        {
+            "Rank": "181",
+            "Server Version": "QNAPGNS-8000A4.1.4.0118",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "182",
+            "Server Version": "QNAPNAS-2108R2.27.1024",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "183",
+            "Server Version": "QNAPNAS-40104.2.0.0606",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "184",
+            "Server Version": "QNAPNAS-41002.26.0517",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "185",
+            "Server Version": "QNAPTS-1091.1.2.1009T",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "186",
+            "Server Version": "QNAPTS-2091.1.1.0831T",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "187",
+            "Server Version": "QNAPTS-2091.1.3.1101T",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "188",
+            "Server Version": "QNAPTS-40ITTurboServer1.1.0.0425",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "189",
+            "Server Version": "QNAPTS-411U1.2.0.0531",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "190",
+            "Server Version": "thttpd2.20b",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "191",
+            "Server Version": "VNCServerEnterpriseEditionE4.2.5",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "192",
+            "Server Version": "Apache1.3.12",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "193",
+            "Server Version": "Apache1.3.17",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "194",
+            "Server Version": "Apache1.3.35",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "195",
+            "Server Version": "Apache1.3.41",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "196",
+            "Server Version": "Apache2.2.0",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "197",
+            "Server Version": "Apache2.3.0",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "198",
+            "Server Version": "Apache2.4.2",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "199",
+            "Server Version": "Apache2.4.3",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "200",
+            "Server Version": "Apache2.4.4",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "201",
+            "Server Version": "Apache2.4.6",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "202",
+            "Server Version": "Apache2.4.7",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "203",
+            "Server Version": "Apache2.4.9",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "204",
+            "Server Version": "Apache2.4.10",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "205",
+            "Server Version": "Apache2.4.12",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "206",
+            "Server Version": "Apache2.4.16",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "207",
+            "Server Version": "Apache2.4.18",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "208",
+            "Server Version": "Apache2.4.23",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "209",
+            "Server Version": "Apache2.4.25",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "210",
+            "Server Version": "Apache2.4.29",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "211",
+            "Server Version": "Apache2.4.33",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "212",
+            "Server Version": "Apache2.4.37",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "213",
+            "Server Version": "Apache2.4.43",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "214",
+            "Server Version": "Apache2.4.46",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "215",
+            "Server Version": "Apache2.4.48",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "216",
+            "Server Version": "Apache2.4.51",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "217",
+            "Server Version": "Apache2.4.56",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "218",
+            "Server Version": "Apache2.4.57",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "219",
+            "Server Version": "Apache2.4.58",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "220",
+            "Server Version": "Apache2.4.59",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "221",
+            "Server Version": "OpenSA1.0.1",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "222",
+            "Server Version": "OpenSA1.0.3",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "223",
+            "Server Version": "OpenSA1.0.4",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "224",
+            "Server Version": "OracleApplicationServer10g10.1.3.0.0",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "225",
+            "Server Version": "OracleApplicationServer10g9.0.4.0.0",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "226",
+            "Server Version": "OracleApplicationServer10g9.0.4.2.0",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "227",
+            "Server Version": "OracleApplicationServer10g9.0.4.3.0",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "228",
+            "Server Version": "Apache1.3.29",
+            "Score": "55",
+            "Hits": "22"
+        },
+        {
+            "Rank": "229",
+            "Server Version": "lighttpd1.4.13",
+            "Score": "55",
+            "Hits": "23"
+        },
+        {
+            "Rank": "230",
+            "Server Version": "MicrosoftIIS7.0",
+            "Score": "55",
+            "Hits": "22"
+        },
+        {
+            "Rank": "231",
+            "Server Version": "ZyxelP-660R-D3RomPager4.51",
+            "Score": "54",
+            "Hits": "23"
+        },
+        {
+            "Rank": "232",
+            "Server Version": "4DWebSTAR2.0",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "233",
+            "Server Version": "AOLserver2.3.3",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "234",
+            "Server Version": "Boa0.92o",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "235",
+            "Server Version": "FortinetFortigate",
+            "Score": "54",
+            "Hits": "24"
+        },
+        {
+            "Rank": "236",
+            "Server Version": "NetscapeEnterpriseServer3.5.1",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "241",
+            "Server Version": "TheServer2.21L",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "242",
+            "Server Version": "TomcatWebServer3.2.2",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "243",
+            "Server Version": "AOLserver3.3.1",
+            "Score": "54",
+            "Hits": "20"
+        },
+        {
+            "Rank": "244",
+            "Server Version": "IBMHTTPServer2.0.47.1",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "245",
+            "Server Version": "lighttpd1.4.18",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "246",
+            "Server Version": "nginx0.6.26",
+            "Score": "54",
+            "Hits": "22"
+        },
+        {
+            "Rank": "247",
+            "Server Version": "vqServer1.9.56",
+            "Score": "54",
+            "Hits": "20"
+        },
+        {
+            "Rank": "248",
+            "Server Version": "BarracudaNetworksSpamFirewall",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "249",
+            "Server Version": "0W0.8c",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "250",
+            "Server Version": "Apache2.0.49",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "251",
+            "Server Version": "Apache2.0.58",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "252",
+            "Server Version": "Apache2.2.11",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "253",
+            "Server Version": "Apache2.2.9",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "254",
+            "Server Version": "nginx0.6.16",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "255",
+            "Server Version": "nginx0.6.20",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "256",
+            "Server Version": "OracleApplicationServer9i9.0.2.3.0",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "257",
+            "Server Version": "Roxen4.5.111",
+            "Score": "53",
+            "Hits": "21"
+        },
+        {
+            "Rank": "258",
+            "Server Version": "Araneida0.84",
+            "Score": "52",
+            "Hits": "24"
+        },
+        {
+            "Rank": "259",
+            "Server Version": "AshleysWebserver",
+            "Score": "52",
+            "Hits": "24"
+        },
+        {
+            "Rank": "260",
+            "Server Version": "4DWebSTAR5.3.1",
+            "Score": "52",
+            "Hits": "24"
+        },
+        {
+            "Rank": "261",
+            "Server Version": "CiscoVPN3000ConcentratorVirataEmWebR6.2.0",
+            "Score": "52",
+            "Hits": "24"
+        },
+        {
+            "Rank": "262",
+            "Server Version": "Jetty5.1.10",
+            "Score": "52",
+            "Hits": "24"
+        },
+        {
+            "Rank": "263",
+            "Server Version": "KLone2.1.0rc1",
+            "Score": "52",
+            "Hits": "20"
+        },
+        {
+            "Rank": "264",
+            "Server Version": "lighttpd1.5.0",
+            "Score": "52",
+            "Hits": "23"
+        },
+        {
+            "Rank": "265",
+            "Server Version": "OverseeWebserver1.3.18",
+            "Score": "52",
+            "Hits": "24"
+        },
+        {
+            "Rank": "266",
+            "Server Version": "BadBlue2.7",
+            "Score": "52",
+            "Hits": "22"
+        },
+        {
+            "Rank": "267",
+            "Server Version": "NetBotz320thttpd2.25b",
+            "Score": "51",
+            "Hits": "23"
+        },
+        {
+            "Rank": "268",
+            "Server Version": "NetBotz420thttpd2.25b",
+            "Score": "51",
+            "Hits": "23"
+        },
+        {
+            "Rank": "269",
+            "Server Version": "NetBotz500thttpd2.25b",
+            "Score": "51",
+            "Hits": "23"
+        },
+        {
+            "Rank": "270",
+            "Server Version": "WallBotz500thttpd2.25b",
+            "Score": "51",
+            "Hits": "23"
+        },
+        {
+            "Rank": "271",
+            "Server Version": "NetscapeEnterpriseServer3.5.1G",
+            "Score": "51",
+            "Hits": "22"
+        },
+        {
+            "Rank": "272",
+            "Server Version": "NetscapeFasttrack3.02a",
+            "Score": "51",
+            "Hits": "22"
+        },
+        {
+            "Rank": "273",
+            "Server Version": "Hiawatha6.2",
+            "Score": "51",
+            "Hits": "22"
+        },
+        {
+            "Rank": "274",
+            "Server Version": "Resin3.0.23",
+            "Score": "51",
+            "Hits": "22"
+        },
+        {
+            "Rank": "275",
+            "Server Version": "Zope2.7.9",
+            "Score": "51",
+            "Hits": "19"
+        },
+        {
+            "Rank": "276",
+            "Server Version": "MicrosoftISAServer2006",
+            "Score": "50",
+            "Hits": "26"
+        },
+        {
+            "Rank": "277",
+            "Server Version": "Apache1.3.28",
+            "Score": "50",
+            "Hits": "21"
+        },
+        {
+            "Rank": "278",
+            "Server Version": "Mongrel1.0",
+            "Score": "50",
+            "Hits": "21"
+        },
+        {
+            "Rank": "279",
+            "Server Version": "AXIS2400VideoServer",
+            "Score": "49",
+            "Hits": "19"
+        },
+        {
+            "Rank": "280",
+            "Server Version": "NetWareEnterpriseWebServer5.1",
+            "Score": "49",
+            "Hits": "21"
+        },
+        {
+            "Rank": "281",
+            "Server Version": "Jetty5.1.1",
+            "Score": "49",
+            "Hits": "21"
+        },
+        {
+            "Rank": "282",
+            "Server Version": "Gatling0.10",
+            "Score": "48",
+            "Hits": "22"
+        },
+        {
+            "Rank": "283",
+            "Server Version": "Gatling0.9",
+            "Score": "48",
+            "Hits": "22"
+        },
+        {
+            "Rank": "284",
+            "Server Version": "NetopiaRouterAllegroRomPager2.10",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "285",
+            "Server Version": "Apache2.0.63",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "286",
+            "Server Version": "firecat1.0.0Beta",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "287",
+            "Server Version": "Hiawatha6.11",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "288",
+            "Server Version": "IBMHTTPServer6.0.2.19",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "289",
+            "Server Version": "IndyIdHTTPServer9.00.10",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "290",
+            "Server Version": "Jetty6.1.1",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "291",
+            "Server Version": "lighttpd1.4.22",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "292",
+            "Server Version": "nginx0.5.33",
+            "Score": "48",
+            "Hits": "20"
+        },
+        {
+            "Rank": "293",
+            "Server Version": "OmniHTTPd2.06",
+            "Score": "47",
+            "Hits": "23"
+        },
+        {
+            "Rank": "294",
+            "Server Version": "OmniHTTPd2.09",
+            "Score": "47",
+            "Hits": "23"
+        },
+        {
+            "Rank": "295",
+            "Server Version": "OmniHTTPd2.10",
+            "Score": "47",
+            "Hits": "23"
+        },
+        {
+            "Rank": "296",
+            "Server Version": "SunJavaSystemWebServer6.1",
+            "Score": "47",
+            "Hits": "19"
+        },
+        {
+            "Rank": "297",
+            "Server Version": "dwhttpd4.0.2a7a",
+            "Score": "46",
+            "Hits": "18"
+        },
+        {
+            "Rank": "298",
+            "Server Version": "dwhttpd4.1a6",
+            "Score": "46",
+            "Hits": "18"
+        },
+        {
+            "Rank": "299",
+            "Server Version": "dwhttpd4.2a7",
+            "Score": "46",
+            "Hits": "18"
+        },
+        {
+            "Rank": "301",
+            "Server Version": "NetscapeEnterpriseServer4.1",
+            "Score": "46",
+            "Hits": "19"
+        },
+        {
+            "Rank": "302",
+            "Server Version": "AIDeXMini-Webserver1.1",
+            "Score": "45",
+            "Hits": "21"
+        },
+        {
+            "Rank": "303",
+            "Server Version": "lighttpd1.4.16",
+            "Score": "45",
+            "Hits": "25"
+        },
+        {
+            "Rank": "304",
+            "Server Version": "thttpd2.24",
+            "Score": "45",
+            "Hits": "25"
+        },
+        {
+            "Rank": "305",
+            "Server Version": "OpenSA1.0.5",
+            "Score": "45",
+            "Hits": "20"
+        },
+        {
+            "Rank": "306",
+            "Server Version": "Cougar9.5.6001.6264",
+            "Score": "44",
+            "Hits": "21"
+        },
+        {
+            "Rank": "307",
+            "Server Version": "DreamboxDM500WebInterface6.0.4",
+            "Score": "44",
+            "Hits": "20"
+        },
+        {
+            "Rank": "308",
+            "Server Version": "Jana-Server2.4.8.51",
+            "Score": "44",
+            "Hits": "21"
+        },
+        {
+            "Rank": "309",
+            "Server Version": "BelkinRouter2.00.002",
+            "Score": "44",
+            "Hits": "20"
+        },
+        {
+            "Rank": "310",
+            "Server Version": "Dell1710n",
+            "Score": "44",
+            "Hits": "18"
+        },
+        {
+            "Rank": "311",
+            "Server Version": "Dell3232",
+            "Score": "44",
+            "Hits": "18"
+        },
+        {
+            "Rank": "312",
+            "Server Version": "DellM5200",
+            "Score": "44",
+            "Hits": "18"
+        },
+        {
+            "Rank": "313",
+            "Server Version": "LexmarkC750",
+            "Score": "44",
+            "Hits": "18"
+        },
+        {
+            "Rank": "314",
+            "Server Version": "LexmarkE323",
+            "Score": "44",
+            "Hits": "18"
+        },
+        {
+            "Rank": "315",
+            "Server Version": "LexmarkOptraS1255",
+            "Score": "44",
+            "Hits": "18"
+        },
+        {
+            "Rank": "316",
+            "Server Version": "LexmarkT630",
+            "Score": "44",
+            "Hits": "18"
+        },
+        {
+            "Rank": "317",
+            "Server Version": "MicahLansingAdvancedWebServer1.2",
+            "Score": "44",
+            "Hits": "20"
+        },
+        {
+            "Rank": "318",
+            "Server Version": "PacketShaperhttpd1.00",
+            "Score": "44",
+            "Hits": "20"
+        },
+        {
+            "Rank": "319",
+            "Server Version": "SymantecMailSecurityforSMTP",
+            "Score": "44",
+            "Hits": "20"
+        },
+        {
+            "Rank": "320",
+            "Server Version": "LinksysWVC54GCBoa0.94.13",
+            "Score": "43",
+            "Hits": "16"
+        },
+        {
+            "Rank": "321",
+            "Server Version": "BarracudaDrive3.9.1",
+            "Score": "43",
+            "Hits": "18"
+        },
+        {
+            "Rank": "322",
+            "Server Version": "NetgearRP1143.26",
+            "Score": "42",
+            "Hits": "23"
+        },
+        {
+            "Rank": "323",
+            "Server Version": "nginx0.6.13",
+            "Score": "42",
+            "Hits": "22"
+        },
+        {
+            "Rank": "324",
+            "Server Version": "TclHttpd3.5.1",
+            "Score": "42",
+            "Hits": "22"
+        },
+        {
+            "Rank": "325",
+            "Server Version": "XeroxPhaser6200",
+            "Score": "42",
+            "Hits": "22"
+        },
+        {
+            "Rank": "326",
+            "Server Version": "XeroxPhaser7300",
+            "Score": "42",
+            "Hits": "22"
+        },
+        {
+            "Rank": "327",
+            "Server Version": "Anti-WebHTTPD3.0.7",
+            "Score": "42",
+            "Hits": "16"
+        },
+        {
+            "Rank": "328",
+            "Server Version": "thttpd2.19-MX",
+            "Score": "42",
+            "Hits": "20"
+        },
+        {
+            "Rank": "329",
+            "Server Version": "OSU3.12alpha",
+            "Score": "41",
+            "Hits": "21"
+        },
+        {
+            "Rank": "341",
+            "Server Version": "NetscapeEnterpriseServer2.01",
+            "Score": "41",
+            "Hits": "17"
+        },
+        {
+            "Rank": "342",
+            "Server Version": "SnapAppliance3.1.603",
+            "Score": "41",
+            "Hits": "17"
+        },
+        {
+            "Rank": "343",
+            "Server Version": "SnapAppliance3.4.805",
+            "Score": "41",
+            "Hits": "17"
+        },
+        {
+            "Rank": "344",
+            "Server Version": "TandbergVideoconferenceManagement",
+            "Score": "41",
+            "Hits": "20"
+        },
+        {
+            "Rank": "345",
+            "Server Version": "ZoomADSL",
+            "Score": "40",
+            "Hits": "20"
+        },
+        {
+            "Rank": "346",
+            "Server Version": "Resin2.1.17",
+            "Score": "39",
+            "Hits": "19"
+        },
+        {
+            "Rank": "347",
+            "Server Version": "SnapAppliance3.4.803",
+            "Score": "39",
+            "Hits": "15"
+        },
+        {
+            "Rank": "348",
+            "Server Version": "SnapAppliance4.0.830",
+            "Score": "39",
+            "Hits": "15"
+        },
+        {
+            "Rank": "349",
+            "Server Version": "SnapAppliance4.0.854",
+            "Score": "39",
+            "Hits": "15"
+        },
+        {
+            "Rank": "350",
+            "Server Version": "SnapAppliance4.0.860",
+            "Score": "39",
+            "Hits": "15"
+        },
+        {
+            "Rank": "352",
+            "Server Version": "ListManagerWeb8.8c",
+            "Score": "36",
+            "Hits": "22"
+        },
+        {
+            "Rank": "353",
+            "Server Version": "GlobalSCAPESecureServer3.3",
+            "Score": "36",
+            "Hits": "20"
+        },
+        {
+            "Rank": "354",
+            "Server Version": "BaseHTTPServer0.3",
+            "Score": "36",
+            "Hits": "16"
+        },
+        {
+            "Rank": "356",
+            "Server Version": "OracleApplicationServer10g9.0.4.1.0",
+            "Score": "34",
+            "Hits": "18"
+        },
+        {
+            "Rank": "357",
+            "Server Version": "Squid2.5.STABLE5",
+            "Score": "32",
+            "Hits": "20"
+        },
+        {
+            "Rank": "358",
+            "Server Version": "Squid2.5.STABLE9",
+            "Score": "32",
+            "Hits": "20"
+        },
+        {
+            "Rank": "359",
+            "Server Version": "Squid2.6.STABLE13",
+            "Score": "32",
+            "Hits": "20"
+        },
+        {
+            "Rank": "360",
+            "Server Version": "Squid2.6.STABLE4",
+            "Score": "32",
+            "Hits": "20"
+        },
+        {
+            "Rank": "361",
+            "Server Version": "Squid2.6.STABLE7",
+            "Score": "32",
+            "Hits": "20"
+        },
+        {
+            "Rank": "362",
+            "Server Version": "nginx0.7.35",
+            "Score": "32",
+            "Hits": "14"
+        },
+        {
+            "Rank": "363",
+            "Server Version": "Jigsaw2.2.5",
+            "Score": "28",
+            "Hits": "16"
+        },
+        {
+            "Rank": "364",
+            "Server Version": "KGetwebinterface2.1.3",
+            "Score": "28",
+            "Hits": "16"
+        },
+        {
+            "Rank": "365",
+            "Server Version": "Squid2.5.STABLE6",
+            "Score": "24",
+            "Hits": "15"
+        },
+        {
+            "Rank": "366",
+            "Server Version": "SWAT3.0.24",
+            "Score": "24",
+            "Hits": "15"
+        },
+        {
+            "Rank": "367",
+            "Server Version": "DMSimplehttpServerBeta1",
+            "Score": "24",
+            "Hits": "8"
+        },
+        {
+            "Rank": "368",
+            "Server Version": "FinalWebServer",
+            "Score": "24",
+            "Hits": "8"
+        },
+        {
+            "Rank": "369",
+            "Server Version": "CompaqHTTPServer5.2",
+            "Score": "21",
+            "Hits": "13"
+        },
+        {
+            "Rank": "370",
+            "Server Version": "CompaqHTTPServer5.7",
+            "Score": "21",
+            "Hits": "13"
+        },
+        {
+            "Rank": "371",
+            "Server Version": "CompaqHTTPServer5.91",
+            "Score": "21",
+            "Hits": "13"
+        },
+        {
+            "Rank": "372",
+            "Server Version": "CompaqHTTPServer5.94",
+            "Score": "21",
+            "Hits": "13"
+        },
+        {
+            "Rank": "373",
+            "Server Version": "OSU3.9",
+            "Score": "18",
+            "Hits": "11"
+        },
+        {
+            "Rank": "374",
+            "Server Version": "SHOUTcastServer1.9.5",
+            "Score": "16",
+            "Hits": "8"
+        },
+        {
+            "Rank": "375",
+            "Server Version": "SHOUTcastServer1.9.8",
+            "Score": "16",
+            "Hits": "8"
+        },
+        {
+            "Rank": "376",
+            "Server Version": "SonicWALLCSM32002.6.0.0",
+            "Score": "16",
+            "Hits": "6"
+        },
+        {
+            "Rank": "377",
+            "Server Version": "TTBSimpleWebServer",
+            "Score": "11",
+            "Hits": "3"
+        }
+    ],
+    "http_responses": [
+        {
+            "method": "GET",
+            "path": "/",
+            "status": "HTTP/1.1 200 OK",
+            "headers": {
+                "CONNECTION": "close",
+                "Date": "Sat, 12 Feb 2000 13:55:50 GMT",
+                "Last-Modified": "Mon, 16 Aug 2021 02:36:53 GMT",
+                "Etag": "\"1629081413:7fd0\"",
+                "CONTENT-LENGTH": "32720",
+                "CACHE-CONTROL": "max-age=0",
+                "X-Frame-Options": "SAMEORIGIN",
+                "Strict-Transport-Security": "max-age=604800; includeSubDomains",
+                "X-XSS-Protection": "1;mode=block",
+                "Content-Security-Policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+                "X-Content-Type-Options": "nosniff",
+                "CONTENT-TYPE": "text/html"
+            }
+        },
+        {
+            "method": "GET_LONG",
+            "path": "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "error": "Remote end closed connection without response"
+        },
+        {
+            "method": "GET_NONEXISTING",
+            "path": "/404test_.html",
+            "error": "Remote end closed connection without response"
+        },
+        {
+            "method": "HEAD",
+            "path": "/",
+            "status": "HTTP/1.1 200 OK",
+            "headers": {
+                "CONNECTION": "close",
+                "Date": "Sat, 12 Feb 2000 13:55:50 GMT",
+                "Last-Modified": "Mon, 16 Aug 2021 02:36:53 GMT",
+                "Etag": "\"1629081413:7fd0\"",
+                "CONTENT-LENGTH": "32720",
+                "CACHE-CONTROL": "max-age=0",
+                "X-Frame-Options": "SAMEORIGIN",
+                "Strict-Transport-Security": "max-age=604800; includeSubDomains",
+                "X-XSS-Protection": "1;mode=block",
+                "Content-Security-Policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+                "X-Content-Type-Options": "nosniff",
+                "CONTENT-TYPE": "text/html"
+            }
+        }
+    ]
+}

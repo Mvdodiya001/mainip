@@ -1,0 +1,117 @@
+.tabs-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+
+  /* Improved styling for the tabs container */
+  .tabs {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+    /* Enable horizontal scrolling for overflowing tabs */
+  }
+
+  /* Styling for the tab header */
+  .tab-header {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto;
+    /* Enable horizontal scrolling for overflowing tabs */
+    white-space: nowrap;
+    /* Prevent tabs from wrapping to the next line */
+  }
+
+  /* Styling for each tab */
+  .tab-header li {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+    /* Add some space between tabs */
+    min-width: 120px;
+    /* Set a minimum width for each tab */
+    text-overflow: ellipsis;
+    /* Show ellipsis (...) for long tab names */
+    overflow: hidden;
+    /* Hide overflowing tab names */
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  /* Hover styles for tabs */
+  .tab-header li:hover {
+    background-color: #f2f2f2;
+    color: #000;
+  }
+
+  /* Active tab styles */
+  .tab-header .active-tab {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  /* Styling for add and remove icons */
+  .add-remove-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .add-tab-icon,
+  .remove-tab-icon {
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    /* Added color for the icons */
+  }
+
+  .add-tab-icon {
+    background-color: #28a745;
+    /* Green color for Add button */
+  }
+
+  .add-tab-icon:hover,
+  .remove-tab-icon:hover {
+    background-color: #f2f2f2;
+    color: #000;
+    /* Added color for hover effect */
+  }
+
+  .remove-tab-icon {
+    background-color: #dc3545;
+    /* Red color for Remove button */
+  }
+
+  .tab-body {
+    padding: 20px;
+  }
+
+  .tab input,
+  .tab textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .tab textarea {
+    resize: vertical;
+  }

@@ -1,0 +1,146 @@
+{
+    "data":[
+        {
+            "slno":1,
+            "ports": ["9100/tcp", "515/tcp","9101/tcp","9102/tcp"],
+            "services":["jetdirect", "printer"],
+            "deviceType": "printer"
+        },
+        {
+            "slno":2,
+            "ports": ["554/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "camera"    
+        },
+        {
+            "slno":3,
+            "ports": ["4070/tcp", "4071/tcp", "55442/tcp", "55443/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Amazon Echo"    
+        },
+        {
+            "slno":4,
+            "ports": ["554/tcp", "8554/tcp", "19531/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "August Doorbell"
+        },
+        {
+            "slno":5,
+            "ports": ["80/tcp", "81/tcp", "9964/tcp", "49153/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Belkin Cam"    
+        },
+        {
+            "slno":5,
+            "ports": ["80/tcp", "502/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "PLC"    
+        },
+        {
+            "slno":6,
+            "ports": ["53/tcp"],
+            "mayBe":["49152/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Belkin Motion"    
+        },
+        {
+            "slno":7,
+            "ports": ["53/tcp", "49155/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Belkin Switch"    
+        },
+        {
+            "slno":8,
+            "ports": ["21/tcp", "23/tcp", "5001/tcp", "5004/tcp", "16119/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Dlink Cam"    
+        },
+        {
+            "slno":9,
+            "ports": ["8008/tcp", "8009/tcp", "9000/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Google Chromecast"    
+        },
+        {
+            "slno":10,
+            "ports": ["8008/tcp", "8009/tcp", "9000/tcp", "10001/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Google Home"    
+        },
+        {
+            "slno":11,
+            "ports": ["80/tcp", "443/tcp", "631/tcp", "3910/tcp", "3911/tcp", "8080/tcp", "9100,/tcp", "9220/tcp", "53048/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "HP Printer"    
+        },
+        {
+            "slno":12,
+            "ports": ["80/tcp", "8080/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Hue bulb"    
+        },
+        {
+            "slno":13,
+            "ports": ["80/tcp", "5555/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Netatmo Cam"    
+        },
+        {
+            "slno":14,
+            "ports": ["80/tcp", "443/tcp", "554/tcp", "943/tcp", "4520/tcp"],
+            "mayBe":["49152/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Samsung Cam"    
+        },
+        {
+            "slno":15,
+            "ports": ["23/tcp", "39500/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Smart Things"    
+        },
+        {
+            "slno":16,
+            "ports": ["80/tcp", "554/tcp", "8080/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "TPLink Cam"    
+        },
+        {
+            "slno":17,
+            "ports": ["9999/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "TPLink Switch"    
+        },
+        {
+            "slno":18,
+            "ports": ["5080/tcp", "44395/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Triby Speaker"    
+        },
+        {
+            "slno":19,
+            "ports": ["6668/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Vivitar power"    
+        },
+        {
+            "slno":20,
+            "ports": ["9999/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "TPLink Switch"    
+        },
+        {
+            "slno":21,
+            "ports": ["22/tcp", "7685/tcp", "7888/tcp"],
+            "services":["rtsp" ],
+            "deviceType": "Whithings Sleep"    
+        },
+        {
+            "slno":22,
+            "ports": ["62078/tcp"],
+            "services":["iphone-sync" ],
+            "deviceType": "iphone"    
+        }
+    ]
+}
+
+

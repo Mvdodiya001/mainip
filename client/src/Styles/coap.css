@@ -1,0 +1,233 @@
+.coap-container {
+	flex: 1;
+}
+
+.coap-header-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+.report-container--table-div {
+	padding: 10px;
+}
+
+/* .coap-communication {
+	display: flex;
+	margin-bottom: 2rem;
+}
+
+.coap-communication > div.coap-entity {
+	flex: 1;
+	border: 1px solid #1260cc;
+	padding: 0.5rem 2rem;
+	position: relative;
+} */
+
+
+
+
+
+
+
+.coap-communication {
+    display: flex;
+    justify-content: center;
+}
+
+.coap-communication > div.coap-entity {
+    flex: 1;
+    border: 1px solid #1260cc;
+    padding: 0.5rem 2rem;
+    position: relative;
+	max-height: 820px;
+}
+
+
+
+
+
+
+.coap-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.coap-header > h1 {
+	font-size: 2rem;
+	font-weight: 500;
+	color: #1260cc;
+}
+
+.coap-server-status {
+	padding: 0.25rem 1.5rem;
+	border-radius: 1rem;
+}
+
+.coap-server-status--active {
+	background-color: #00ff00cc;
+}
+
+.coap-server-status--inactive {
+	background-color: #ff0000cc;
+}
+
+.coap-header-buttons > button {
+	background-color: #1260cc;
+	color: #ffffff;
+	font-weight: 500;
+	padding: 0.5rem 3rem;
+	outline: none;
+	border: none;
+}
+
+.coap-dos-attack {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Horizontal centering */
+	justify-content: center; /* Vertical centering */
+	margin: auto;
+	height: 30vh; /* Full viewport height for vertical centering */
+}
+
+.coap-dos-attack input,
+.coap-dos-attack button {
+	margin: 10px 0; /* Add some margin to space between input and buttons */
+	width: 300px; /* Optional: define a width for input and buttons */
+}
+
+
+.coap-replay-attack {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Horizontal centering */
+	justify-content: center; /* Vertical centering */
+	margin: auto;
+	/* height: ; Full viewport height for vertical centering */
+}
+
+.coap-replay-attack input,
+.coap-replay-attack button {
+	margin: 10px 0; /* Space between input and button */
+	width: 300px; /* Optional: define a width for input and buttons */
+}
+
+.coap-logs {
+	margin-top: 20px;
+	text-align: center; /* Center the output text */
+}
+
+
+.coap-type-select-buttons > button {
+	background-color: #1260cc;
+	color: #fff;
+	font-weight: 500;
+	padding: 0.5rem 3.5rem;
+	outline: none;
+	border: none;
+	margin: 0.5rem;
+	border: 1px solid #1260cc;
+	transition: all 0.3s ease-in-out;
+}
+
+.coap-type-select-buttons > button.active {
+	background-color: #fff;
+	color: #1260cc;
+	transform: translateY(0.5rem);
+}
+
+
+
+.coap-logs-message {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    color: #333; /* A darker color, you can use a different shade if you want */
+    line-height: 1.5; /* Optional: improves readability */
+}
+
+
+.coap-logs {
+	display: flex;
+	flex-direction: column;
+}
+
+.coap-logs > div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+
+.coap-logs-heading {
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: #1260cc;
+	border-bottom: 1px solid #1260cc;
+	padding-bottom: 0.25rem;
+} 
+
+.coap-logs-table {
+	width: 100%;
+}
+
+.coap-logs-table > * {
+	width: 100%;
+}
+
+.coap-logs-table > * > tr {
+	width: 100%;
+}
+
+.coap-logs-table > * > tr > * {
+	width: 50%;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0.25rem 1rem;
+	border: 1px solid #000000;
+}
+
+.coap-logs-table > thead > tr > th {
+	font-weight: 600;
+	color: #1260cc;
+}
+
+.coap-logs-summary {
+	padding: 0.5rem 0rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.coap-logs {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scroll */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Border around the logs */
+    padding: 10px;
+    font-family: monospace; /* Monospace font for code/logs */
+    color: #333; /* Text color */
+    word-wrap: break-word; /* Handle long lines */
+}
+
+
+.coap-logs::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.coap-logs::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 4px; /* Rounded scrollbar thumb */
+}
+
+.coap-logs::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker thumb on hover */
+}

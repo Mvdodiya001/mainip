@@ -1,0 +1,6 @@
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             Dropbear sshd 2018.76 (protocol 2.0)
+80/tcp   open  http            lighttpd
+443/tcp  open  ssl/http        lighttpd
+502/tcp  open  mbap?
+2455/tcp open  wago-io-system?

@@ -1,0 +1,48 @@
+- help command
+
+- check if all args are provided
+
+- check for correct credentials
+
+
+
+- Connection Return Codes
+    0: Connection successful
+    1: Connection refused – incorrect protocol version
+    2: Connection refused – invalid client identifier
+    3: Connection refused – server unavailable
+    4: Connection refused – bad username or password
+    5: Connection refused – not authorised
+    6-255: Currently unused.
+
+
+
+
+
+
+
+
+
+
+auth breaker
+
+
+    check for proper format of passwords
+
+
+    - only one of password or the filepath is to be given in args
+
+
+    you need to give username and one of password of the filepath. if there is no auth for broker the authbreaker service will inform
+
+
+
+
+
+
+
+
+
+loop publisher
+
+    the connect method is running after the first user input is given

@@ -1,0 +1,42 @@
+rules:
+  - id: weak_iv
+    patterns:
+      - pattern-either:
+          - pattern: |
+              byte[] $X = {
+                0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+              };
+              ...
+              $Y =  new IvParameterSpec($X, ...);
+          - pattern: |
+              byte[] $X = {
+                0x01,0x02,0x03,0x04,0x05,0x06,0x07
+              };
+              ...
+              $Y =  new IvParameterSpec($X, ...);
+    message: >-
+      The App may use weak IVs like "0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00" or
+      "0x01,0x02,0x03,0x04,0x05,0x06,0x07". Not using a random IV makes the
+      resulting ciphertext much more predictable and susceptible to a dictionary
+      attack.
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      cwe: cwe-1204
+      cves:
+        - CVE-2020-1472
+        - CVE-2011-3389
+        - CVE-2001-0161
+        - CVE-2001-0160
+        - CVE-2017-3225
+        - CVE-2016-6485
+        - CVE-2014-5386
+        - CVE-2020-5408
+        - CVE-2017-17704
+        - CVE-2017-11133
+        - CVE-2007-3528
+      owasp-mobile: m5
+      masvs: crypto-5
+      reference: >-
+        https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#mobile-app-cryptography

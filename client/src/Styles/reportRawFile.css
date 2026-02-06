@@ -1,0 +1,49 @@
+.report-raw-file {
+    background-color: var(--bs-white);
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+	overflow: hidden;
+	padding-bottom: 2rem;
+}
+
+.report-raw-file--top {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	align-items: center;
+	margin: 1rem auto 2rem auto;
+	color: rgb(var(--bs-primary-rgb));
+	font-size: 1.5rem;
+}
+
+.close-icon {
+	cursor: pointer;
+}
+
+.report-raw-file--text {
+    width: 100%;
+    height: 100%;
+    color: rgb(var(--bs-primary-rgb));
+    padding: 2rem;	
+	overflow: scroll;
+}
+
+.card-group{
+	margin-bottom: 2rem;
+}
+
+.cve_low{
+	background-color: rgba(0, 128, 0, 0.829);
+	color: black;
+}
+
+.cve_medium{
+	background-color: rgb(255, 208, 0);
+	color: black;
+}
+
+.cve_high{
+	background-color: rgba(255, 0, 0, 0.719);
+	color: black;
+}

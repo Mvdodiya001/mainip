@@ -1,0 +1,27 @@
+{
+    "com.coloros.alarmclock": {
+        "start": "12-12 09:20:01",
+        "end": "-1",
+        "pkgName": ""
+    },
+    "com.android.server.telecom": {
+        "start": "12-12 12:26:13",
+        "end": "-1",
+        "pkgName": ""
+    },
+    "com.android.chrome": {
+        "start": "12-12 10:51:58",
+        "end": "-1",
+        "pkgName": ""
+    },
+    "com.facebook.katana": {
+        "start": "12-12 11:23:20",
+        "end": "-1",
+        "pkgName": ""
+    },
+    "com.android.systemui": {
+        "start": "12-12 13:25:23",
+        "end": "-1",
+        "pkgName": ""
+    }
+}

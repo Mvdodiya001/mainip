@@ -1,0 +1,39 @@
+# install version 4.4 of emqx
+wget https://www.emqx.com/en/downloads/broker/4.4.17/emqx-4.4.17-otp24.3.4.2-1-ubuntu22.04-amd64.deb
+sudo apt install ./emqx-4.4.17-otp24.3.4.2-1-ubuntu22.04-amd64.deb
+sudo systemctl start emqx
+
+
+# cd to the emqx directory
+cd /etc/emqx
+
+
+# edit the allow_anonymous value in emqx.conf file
+allow_anonymous = false
+
+
+# restart emqx
+systemctl restart emqx.service
+
+
+# go to plugins directory
+cd plugins
+
+
+# provide username and password in emqx_auth_mnesia.conf file
+auth.user.1.username = username
+auth.user.1.password = password
+
+
+# load the edited plugin
+sudo emqx_ctl plugins load emqx_auth_mnesia.conf
+
+
+# restart emqx
+systemctl restart emqx.service
+
+
+# now the authentication is enabled in emqx
+
+
+# when running the clients provide valid credentials

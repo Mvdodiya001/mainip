@@ -1,0 +1,119 @@
+.home {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.apk-scanner-container {
+    margin-top: 2rem;
+}
+
+.apk-scanner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.apk-scanner {
+    flex: 1;
+}
+
+.apk-scanner:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.button {
+    border: none;
+    background-color: rgb(var(--bs-primary-rgb));
+    color: #fff;
+    padding: 0.5rem 1rem;
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.button.rounded {
+    border-radius: 2rem !important;
+    padding: 0.75rem 1.5rem;
+	margin: 0;
+}
+
+.button.rounded > span {
+	margin-right: 0.5rem;
+}
+
+.APK-upload {
+    border: 1px dashed rgb(var(--bs-primary-rgb));
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 20rem;
+    position: relative;
+}
+
+.upload-icon {
+    color: #dcdcdc;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.upload-text {
+    color: rgb(var(--bs-primary-rgb));
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgb(var(--bs-primary-rgb));
+    cursor: pointer;
+}
+
+.file-upload {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.report-download {
+    color: rgb(var(--bs-primary-rgb));
+    cursor: pointer;
+}
+
+.detailed-report {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.detailed-report > p {
+	margin: 0;
+}
+
+.summary-report {
+	height: 32rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+    margin-top: 1rem;
+}
+
+.apk-scanner-cont{
+    margin-left: 2rem;
+}
+
+.apk-scanner-text{
+    margin-bottom: 4rem;
+}

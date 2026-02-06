@@ -1,0 +1,63 @@
+.container-deauth{
+    flex: 1;
+    margin: 0.5rem;
+}
+
+.deauth-heading {
+	font-size: 2rem;
+	font-weight: 500;
+	color: #1260cc;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 2px #1260cc;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ip{
+    color: #fff;
+}
+
+.status-tag{
+    padding: 0.25rem 1.5rem;
+    border-radius: 1rem;
+    max-height: 2rem;
+}
+
+.status-tag.active{
+    background-color: #20bf6b;
+}
+
+.status-tag.inactive{
+    background-color: red;
+}
+
+.deauth-check-heading{
+    color: #1260cc !important;
+    text-align: left;
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+
+.deauth-check-list-item{
+    display: flex;
+    /* border: #1260cc solid 2px; */
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    width: 50%;
+}
+
+.deauth-check-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.check-list-text{
+    margin: 0rem 1rem;
+}

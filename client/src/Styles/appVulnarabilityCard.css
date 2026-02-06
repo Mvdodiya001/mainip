@@ -1,0 +1,154 @@
+.vulnarability-card {
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    width: 98%;
+}
+
+.vulnarability-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(var(--bs-primary-rgb));
+    padding: 0.5rem 1rem;
+}
+
+.vulnarability-card-heading p {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.vulnarability-card-heading-right {
+    display: flex;
+    align-items: center;
+}
+
+.vulnarability-card-heading-right > .severity-tag {
+    padding: 0.25rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    width: 7rem;
+    text-align: center;
+}
+
+.vulnarability-card-heading-right > .severity-tag.low {
+    background-color: #20BF6B;
+}
+
+.vulnarability-card-heading-right > .severity-tag.medium {
+    background-color: #F78C31;
+}
+
+.vulnarability-card-heading-right > .severity-tag.high {
+    background-color: #EB4D4B;
+}
+
+.workspace-div-entry-drpbtn {
+    display: inline;
+    padding: 0.5rem;
+    color: black;
+}
+
+.workspace-div-entry-drpbtn:hover {
+    cursor: pointer;
+}
+
+.workspace-div-entry-drpbtn > button {
+    border: none;
+    outline: none;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+.arrow.up {
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.collapseContent {
+    margin: 0;
+    border: 1px solid rgba(var(--bs-primary-rgb));
+}
+
+.collapseContent > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.collapseContent > div p {
+    padding: 0 0.5rem;
+    margin: 0;
+    color: rgba(var(--bs-primary-rgb));
+}
+
+.cve-tag {
+    display: inline-block;
+    margin: 0.25rem 0rem;
+}
+
+.cve-tag > a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.cve-table{
+    width: 100%;
+    color: rgba(var(--bs-primary-rgb));
+}
+
+.cve-table>table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.vulnarability-details{
+    width: 100%;
+}
+
+.severity-tag-wrapper > .severity-tag {
+    padding: 0.25rem 1rem;
+    /* margin: 0 0.5rem; */
+    border-radius: 1rem;
+    color: rgba(var(--bs-primary-rgb));
+    width: 7rem;
+    text-align: center;
+}
+
+.severity-tag-wrapper > .severity-tag.critical {
+    color: white;
+    background-color: #b10b09;
+}
+
+.severity-tag-wrapper > .severity-tag.medium {
+    color: white;
+    background-color: #F78C31;
+}
+
+.severity-tag-wrapper > .severity-tag.high {
+    color: white;
+    background-color: #EB4D4B;
+}
+
+/* .cve-wrapper.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: ;
+} */

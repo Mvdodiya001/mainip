@@ -1,0 +1,44 @@
+.nav {
+	padding: 0.5rem 1.3rem;
+	margin: auto;
+	width: 100%;
+	display: block;
+	/* background-color: #1260cc; */
+}
+
+.nav .nav-link {
+	color: #1260cc !important;
+	font-size: 1rem;
+}
+
+.nav .nav-link.active {
+	border-bottom: 1px solid #1260cc;
+}
+
+.nav-buttons {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 1.3rem;
+	font-size: 1rem;
+}
+
+.sign-in-button {
+	background-color: #ffffff;
+	border: none;
+	color: #1260cc;
+	padding: 0.5rem 1rem;
+}
+
+.sign-up-button {
+	color: #ffffff;
+	border: none;
+	background-color: #1260cc;
+	padding: 0.5rem 1rem;
+}
+
+.dropdown-item {
+	color: #1260cc;
+	font-size: 1rem !important;
+}

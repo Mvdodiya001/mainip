@@ -1,0 +1,3 @@
+port,services,device-type
+9100/tcp,jetdirect,printer
+

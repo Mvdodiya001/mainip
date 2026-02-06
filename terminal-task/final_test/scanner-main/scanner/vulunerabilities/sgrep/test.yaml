@@ -1,0 +1,11 @@
+rules:
+  - id: Multiple unlocks of a critical resource
+    patterns:
+      - pattern: (lock\.lock\(\);[\s\S]*?lock\.unlock\(\);[\s\S]*?lock\.unlock\(\);)
+    severity: ERROR
+    languages:
+      - java
+    message: >
+      This is a software weakness that can lead to various concurrency issues, such as race conditions, deadlocks, and data corruption.
+    metadata:
+      cwe: cwe-765

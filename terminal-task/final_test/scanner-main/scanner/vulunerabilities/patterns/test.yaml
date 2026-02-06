@@ -1,0 +1,285 @@
+- id: Multiple unlocks of a critical resource
+  message: >-
+    This is a software weakness that can lead to various concurrency issues, such as race conditions, deadlocks, and data corruption.
+  type: Regex
+  pattern: 
+    (lock\.lock\(\);[\s\S]*?lock\.unlock\(\);[^\}]*?lock\.unlock\(\);)
+    # (lock\.lock\(\);[\s\S]*?lock\.unlock\(\);[\s\S]*?lock\.unlock\(\);)
+  severity: ERROR
+  input_case: exact
+  metadata:
+    cwe: CWE-765
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/multiple_unlocks_of_a_critical_resource.md
+    cves:
+      - CVE-2009-0935
+- id: Unvalidated CORS Origin
+  message: >-
+    This refers to the use of Cross-Origin Resource Sharing (CORS) mechanisms without proper validation of the origin.
+  type: Regex
+  pattern: response\.setHeader\("Access-Control-Allow-Origin",\s*request\.getHeader\("Origin"\)\s*\);
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-942
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/uninvalidated_cors_origin.md
+    cves:
+      - CVE-2012-2292
+      - CVE-2014-2049
+      - CVE-2007-6243
+      - CVE-2008-4822
+      - CVE-2010-3636
+- id: Path Injection
+  message: >-
+    Uncontrolled data used in path expression. Path injection vulnerabilities can lead to serious security issues, allowing attackers to manipulate file paths and potentially gain unauthorized access to sensitive resources.
+  type: Regex
+  pattern: new\s+File\s*\(\s*".*?"\s*\+\s*userInput\s*\+\s*".*?"\s*\);
+  severity: ERROR
+  input_case: exact
+  metadata:
+    cwe: CWE-73
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/path_injection.md
+    cves:
+      - CVE-2022-45918
+      - CVE-2008-5748
+      - CVE-2008-5764
+- id: Command Line Injection
+  message: >-
+    Uncontrolled command line. Potential for unauthorized execution of commands, leading to serious security risks.
+  type: Regex
+  pattern: Runtime\.getRuntime\(\)\.exec\(".*?"\s*\+\s*userInput\s*\+\s*".*?"\);
+  severity: ERROR
+  input_case: exact
+  metedata:
+    cwe: CWE-74
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/command_line_injection.md
+    cves:
+      - CVE-2022-36069
+      - CVE-1999-0067
+      - CVE-2022-1509
+      - CVE-2020-9054
+      - CVE-2021-44228
+- id: Call To Thread Run
+  message: >-
+    Direct call to a run() method. It can result in unexpected behavior and defeat the purpose of using threads for concurrent execution.
+  type: Regex
+  pattern: Thread\s*\w+\s*=\s*new\s*Thread\(\)\s*;\s*\w+\.\s*run\s*\(\s*\);
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-572
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/call_to_thread_run.md
+- id: Non Https URL
+  message: >-
+    Failure to use HTTPS URLs. While it may not lead to an immediate security breach, it represents a potential security risk. Addressing warnings related to the use of non-HTTPS URLs is important for ensuring secure communication, especially when handling sensitive information.
+  type: Regex
+  pattern: \\bhttp(?:s)?://[-A-Za-z0-9+&@#/%?=~_|!:,.;]*[-A-Za-z0-9+&@#/%=~_|]
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-693
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/non_https_url.md
+- id: Unsafe URL Forward Dispatch Load
+  message: >-
+    Unsafe URL forward, dispatch, or load from remote source. It indicates a potential security risk.
+  type: Regex
+  pattern: loadUrl\((?:"|\')(.*?)(?:"|\')\);
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-601
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/unsafe_url_forward_dispatch_load.md
+    cves:
+      - CVE-2005-4206
+- id: Sensitive Android File Leak
+  message: >-
+    Leaking sensitive Android file. Leaking sensitive information, especially to external storage or other unauthorized locations, poses a serious security risk and can have severe consequences.
+  type: Regex
+  pattern: FileOutputStream\s+\w+\s+=\s+new\s+FileOutputStream\s*\(\s*"[^"]*\/sdcard\/[^"]*"\s*\);
+  severity: ERROR
+  input_case: exact
+  metadata:
+    cwe: CWE-200
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/sensitive_android_file_leak.md
+- id: Intent Redirection
+  message: >-
+    Android Intent redirection. Intent redirection vulnerabilities can lead to unintended and potentially harmful behavior, making them critical to address for the overall security of the application.
+  type: Regex
+  pattern: Intent\s+\w+\s*=\s*new\s+Intent\s*\(\s*[^,]+,\s*Uri\.parse\(\s*"[^"]+"\s*\)\s*\);
+  severity: ERROR
+  input_case: exact
+  metadata:
+    cwe: CWE-926
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/intent_redirection.md
+    cves:
+      - CVE-2021-25390
+- id: Unsafe Double Checked Locking
+  message: >-
+    Double-checked locking is not thread-safe. This can lead to race conditions and incorrect behavior in a multithreaded environment. 
+  type: Regex
+  pattern: \s*if\s*\(\s*\w+\s*==\s*null\s*\)\s*{\s*[\n\s]*\bsynchronized\s*\(\s*\w+\.\w+\(\)\s*\)\s*{\s*[\n\s]*if\s*\(\s*\w+\s*==\s*null\s*\)\s*{\s*\w+\s*=\s*new\s*\w+\(\);\s*}\s*}\s*}
+  severity: ERROR
+  input_case: exact
+  metadata:
+    cwe: CWE-609
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/unsafe_double_checked_locking.md
+# - id: cleartext-storage-in-class
+#   message: >-
+#     Cleartext storage of sensitive information using storable class. Storing sensitive information in plaintext within classes poses a significant security risk and is considered a serious vulnerability.
+#   type: Regex
+#   pattern: (public|private|protected|static|final)?\s*\w+\s*=\s*".*"\s*;
+#   severity: ERROR
+#   input_case: exact
+#   metadata:
+#     cwe: CWE-499
+# - id: ssrf
+#   message: >-
+#     Server-side request forgery. SSRF vulnerabilities can lead to serious security risks, including unauthorized access to internal resources and potential attacks on backend systems.
+#   type: Regex
+#   pattern: new\s+URL\s*\(\s*("[^"]+"|\w+)\s*\)
+#   severity: ERROR
+#   input_case: exact
+#   metadata:
+#     cwe: CWE-441
+# - id: unreachable-catch-clause
+#   message: >-
+#     Unreachable catch clause. It indicates a potential problem in the code structure that could affect maintainability and correctness.
+#   type: Regex
+#   pattern: catch\s*\([^)]*\)\s*\{(?:[^}]*\}\s*)*[^}]*\}
+#   severity: WARNING
+#   input_case: exact
+#   metadata:
+#     cwe: CWE-398
+- id: Stack Trace Exposure
+  message: >-
+    Information exposure through a stack trace. Exposing stack traces can be a security risk, especially if sensitive details are revealed.
+  type: Regex
+  pattern: 
+    # Log\.(e|wtf)\(.*exception.*\);
+    Log\.(v|d|i|w|e|wtf)\([^;]+e\.printStackTrace\(\);
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-209
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/stack_trace_exposure.md
+    cves:
+      - CVE-2008-2049
+      - CVE-2018-1999036
+      - CVE-2008-4638
+      - CVE-2007-5172
+      - CVE-2008-1579
+      - CVE-2007-1409
+      - CVE-2008-3060
+      - CVE-2005-0603
+      - CVE-2017-9615
+- id: XSS
+  message: >-
+    Cross-site scripting. XSS vulnerabilities can lead to the injection of malicious scripts, posing a significant security risk and potentially compromising the confidentiality and integrity of user data.
+  type: Regex
+  pattern: WebView\.loadData\(\s*".*<script>.*"\s*,\s*".*"\s*,\s*".*"\s*\);
+  severity: ERROR
+  input_case: exact
+  metadata:
+    cwe: CWE-79
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/xss.md
+    cves:
+      - CVE-2021-25926
+      - CVE-2021-25963
+      - CVE-2021-1879
+      - CVE-2020-3580
+      - CVE-2014-8958
+      - CVE-2017-9764
+      - CVE-2014-5198
+      - CVE-2008-5080
+      - CVE-2006-4308
+      - CVE-2007-5727
+      - CVE-2008-5770
+      - CVE-2008-4730
+      - CVE-2008-5734
+      - CVE-2008-0971
+      - CVE-2008-5249
+      - CVE-2006-3568
+      - CVE-2006-3211
+      - CVE-2006-3295
+- id: Insecure Ldaps Endpoints
+  message: >-
+    Insecure LDAPS Endpoint Configuration. Using insecure LDAPS can lead to the transmission of sensitive information over unencrypted connections, posing a significant security risk.
+  type: RegexOr
+  pattern: 
+    - \bLdapContext\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*new\s*InitialLdapContext\(\s*[a-zA-Z_][a-zA-Z0-9_]*,\s*null\s*\);
+    - \bHashtable\s*<\s*String,\s*String\s*>\s*[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*new\s*Hashtable\s*<\s*>\(\s*\);\s*[a-zA-Z_][a-zA-Z0-9_]*\.put\s*\(\s*Context\.PROVIDER_URL,\s*("[^"]*ldap://[^"]*")\s*\);
+    - \bHashtable\s*<\s*String,\s*String\s*>\s*[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*new\s*Hashtable\s*<\s*>\(\s*\);\s*[a-zA-Z_][a-zA-Z0-9_]*\.put\s*\(\s*Context\.PROVIDER_URL,\s*("[a-zA-Z_][a-zA-Z0-9_]*")\s*\);
+  severity: ERROR
+  input_case: exact
+  metadata:
+    cwe: CWE-297
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/insecure_ldap_endpoints.md
+    cves: 
+      - CVE-2009-3767
+# - id: unsynchronized-getter
+#   message: >-
+#     Inconsistent synchronization of getter and setter. Unsynchronized getters in a multi-threaded environment can result in data inconsistency and potential race conditions.
+#   type: Regex
+#   pattern: (get|is)[A-Z][a-zA-Z0-9_]*\s*\(\s*\)[^;]*\{
+#   severity: WARNING
+#   input_case: exact
+#   metadata:
+#     cwe: CWE-664
+- id: Partial Path Traversal
+  message: >-
+    Partial path traversal vulnerability. Partial path traversal vulnerabilities can pose security risks by potentially allowing unauthorized access to files outside of the intended directory.
+  type: Regex
+  pattern: (File|new\s+File)\(.*[\"']\.\.[\"'].*\)
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-22
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/partial_path_traversal.md
+    cves:
+      - CVE-2022-45918
+      - CVE-2019-20916
+      - CVE-2022-31503
+      - CVE-2022-24877
+      - CVE-2021-21972
+      - CVE-2020-4053
+      - CVE-2020-3452
+      - CVE-2019-10743
+      - CVE-2010-0467
+      - CVE-2006-7079
+      - CVE-2009-4194
+      - CVE-2009-4053
+      - CVE-2009-0244
+      - CVE-2009-4013
+      - CVE-2009-4449
+      - CVE-2009-4581
+      - CVE-2010-0012
+      - CVE-2010-0013
+      - CVE-2008-5748
+      - CVE-2009-1936
+- id: Fragment Injection
+  message: >-
+    Android fragment injection. Fragment injection vulnerabilities can pose security risks by potentially allowing untrusted input to manipulate fragment transactions.
+  type: RegexOr
+  pattern:
+    - transaction\.replace\(.*,[^)]*Fragment\s*\.\s*class\s*\w*
+    - (?i)\bFragment\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*\(\s*Fragment\s*\)\s*Class\.forName\(\s*("[a-zA-Z_][a-zA-Z0-9_]*")\s*\)\.newInstance\(\s*\);
+    - (?i)\bFragment\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*\(\s*Fragment\s*\)\s*Class\.forName\(\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\)\.newInstance\(\s*\);
+    - (?i)\bFragment\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*\(\s*Fragment\s*\)\s*Class\.forName\(\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\)\.newInstance\(\s*\);
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-913
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/fragment_injection.md
+- id: Sensitive Cookie Not httponly
+  message: >-
+    Sensitive cookies without the HttpOnly response header set. Setting the HttpOnly flag for sensitive cookies is considered a security best practice to prevent client-side script access.
+  type: Regex
+  pattern: setCookie\s*\(\s*".*(?<!HttpOnly)\b.*"\s*\);
+  severity: WARNING
+  input_case: exact
+  metadata:
+    cwe: CWE-1004
+    reference: https://github.com/vemulapandu/References/blob/main/Documents/sensitive_cookie_not_httponly.md
+    cves:
+     - CVE-2022-24045
+     - CVE-2014-3852
+     - CVE-2015-4138

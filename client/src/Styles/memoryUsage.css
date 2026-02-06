@@ -1,0 +1,47 @@
+.memory-usage {
+	flex: 1;
+}
+
+.memory-usage-row-heading {
+	color: #fff;
+	background-color: #1260cc;
+	text-align: center;
+	font-size: 1rem !important;
+	border-bottom: 1px solid #fff;
+}
+
+.memory-usage-row-value {
+	color: #1260cc;
+	font-size: 1rem !important;
+	text-align: center;
+	border: 1px solid #1260cc;
+}
+
+.fa-circle-info {
+	cursor: pointer;
+}
+
+.memory-usage-top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.memory-usage-packet-name-input {
+	width: 100%;
+	padding: 0.25rem 1rem;
+}
+
+.memory-usage-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+}
+
+.memory-usage-buttons > button {
+	background-color: #1260cc;
+	color: #fff;
+	font-weight: 500;
+	padding: 0.5rem 3.5rem;
+	outline: none;
+	border: none;
+}

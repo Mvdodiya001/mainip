@@ -1,0 +1,31 @@
+rules:
+  - id: object_deserialization
+    patterns:
+      - pattern: new ObjectInputStream(...);
+    severity: WARNING
+    languages:
+      - java
+    message: >
+      Found object deserialization using ObjectInputStream. Deserializing entire
+      Java objects is dangerous because malicious actors can create Java object
+      streams with unintended consequences. Ensure that the objects being
+      deserialized are not user-controlled. Consider using HMACs to sign the
+      data stream to make sure it is not tampered with, or consider only 
+      transmitting object fields and populating a new object.
+    metadata:
+      cwe: cwe-502
+      cves:
+        - CVE-2019-12799
+        - CVE-2015-8103
+        - CVE-2015-4852
+        - CVE-2013-1465
+        - CVE-2012-3527
+        - CVE-2012-0911
+        - CVE-2012-0911
+        - CVE-2011-2520
+        - CVE-2012-4406
+        - CVE-2003-0791
+      owasp-mobile: m1
+      masvs: platform-8
+      reference: >-
+        https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-object-persistence-mstg-platform-8

@@ -1,0 +1,86 @@
+.IPscan {
+	width: 40%;
+	margin: auto;
+	border: 1px solid rgb(var(--bs-primary-rgb));
+	background-color: var(--bs-white);
+}
+
+.modal-top {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	align-items: center;
+	margin: auto;
+	margin-top: 1rem;
+	color: rgb(var(--bs-primary-rgb));
+	font-size: 1.5rem;
+}
+
+.close-icon {
+	cursor: pointer;
+}
+
+.IP-input {
+	color: rgb(var(--bs-primary-rgb));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
+}
+
+.IP-input-box {
+	border: 1px solid rgb(var(--bs-primary-rgb));
+	border-radius: 3px;
+	margin-left: 1rem;
+}
+
+.button {
+	border: none;
+	background-color: rgb(var(--bs-primary-rgb));
+	color: #fff;
+	padding: 0.5rem 1rem;
+	display: block;
+	margin: auto;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.IP-upload {
+	border: 1px dashed rgb(var(--bs-primary-rgb));
+	margin: auto;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	min-height: 20rem;
+	position: relative;
+}
+
+.upload-icon {
+	color: #dcdcdc;
+	font-size: 4rem;
+	margin-bottom: 1rem;
+}
+
+.upload-text {
+	color: rgb(var(--bs-primary-rgb));
+	font-size: 0.85rem;
+	border-bottom: 1px solid rgb(var(--bs-primary-rgb));
+	cursor: pointer;
+}
+
+.file-upload {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}

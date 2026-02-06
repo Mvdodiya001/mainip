@@ -1,0 +1,15 @@
+PORT     STATE    SERVICE        VERSION
+80/tcp   open     ssl/http
+443/tcp  open     ssl/https?
+515/tcp  open     printer?
+631/tcp  open     ssl/ipp
+2390/tcp filtered rsmtp
+4610/tcp filtered unknown
+5200/tcp filtered targus-getdata
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port515-TCP:V=7.80%I=7%D=2/13%Time=67AD9B06%P=x86_64-pc-linux-gnu%r(Ter
+#****************SSL Version*****************
+TLSv1.2
+#******************SSL/TLS Certificate********************
+notBefore=Jul 1 00:00:00 2016 GMT notAfter=Jul 1 00:00:00 2036 GMT subject=O = HP, OU = HP, CN = HPB0227A5B8C4C, ST = STATE, L = HP, C = CN, emailAddress = HPB0227A5B8C4C@HPB0227A5B8C4C.Local issuer=O = HP, OU = HP, CN = HPB0227A5B8C4C, ST = STATE, L = HP, C = CN, emailAddress = HPB0227A5B8C4C@HPB0227A5B8C4C.Local Certificate will not expire
+Certificate validation successful.

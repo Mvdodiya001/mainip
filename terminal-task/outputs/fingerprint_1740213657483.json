@@ -1,0 +1,57 @@
+{
+    "target": "192.168.1.1",
+    "nmap_results": [
+        {
+            "Rank": "No Data",
+            "Server Version": "-",
+            "Score": "-",
+            "Hits": "-"
+        }
+    ],
+    "http_responses": [
+        {
+            "method": "GET",
+            "path": "/",
+            "status": "HTTP/1.1 200 OK",
+            "headers": {
+                "Content-Type": "text/html; charset=utf-8",
+                "Content-Length": "50927",
+                "Set-Cookie": "JSESSIONID=deleted; Expires=Thu, 01 Jan 1970 00:00:01 GMT; Path=/; HttpOnly",
+                "Connection": "keep-alive"
+            }
+        },
+        {
+            "method": "GET_LONG",
+            "path": "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "status": "HTTP/1.1 414 Request-URI Too Long",
+            "headers": {
+                "Content-Type": "text/html; charset=utf-8",
+                "Content-Length": "128",
+                "Set-Cookie": "JSESSIONID=deleted; Expires=Thu, 01 Jan 1970 00:00:01 GMT; Path=/; HttpOnly",
+                "Connection": "close"
+            }
+        },
+        {
+            "method": "GET_NONEXISTING",
+            "path": "/404test_.html",
+            "status": "HTTP/1.1 405 Method Not Allowed",
+            "headers": {
+                "Content-Type": "text/html; charset=utf-8",
+                "Content-Length": "124",
+                "Set-Cookie": "JSESSIONID=deleted; Expires=Thu, 01 Jan 1970 00:00:01 GMT; Path=/; HttpOnly",
+                "Connection": "close"
+            }
+        },
+        {
+            "method": "HEAD",
+            "path": "/",
+            "status": "HTTP/1.1 405 Method Not Allowed",
+            "headers": {
+                "Content-Type": "text/html; charset=utf-8",
+                "Content-Length": "124",
+                "Set-Cookie": "JSESSIONID=deleted; Expires=Thu, 01 Jan 1970 00:00:01 GMT; Path=/; HttpOnly",
+                "Connection": "close"
+            }
+        }
+    ]
+}

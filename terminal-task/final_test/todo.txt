@@ -1,0 +1,19 @@
+See cve.py show no data and it is taking 4 args from terminal
+if SSH port is open in port scan then check for ssh Attempt using already incerted password and username given in file. where already some combinations are written.
+
+
+
+in fist line there is legend in succesion of that line there should be nothing else like value and severnity.i middle coleme value: is printed in every line remove iot.
+
+
+
+ssh downgrad : show additional ssh version :  & current ssh version : [ reffer sir mail command ]
+
+sslcertificate section: if 443 port is not open then it is showing "no data" in website and then it is printing that "443 port is...."  see and fix that
+
+//--------------------------------------------------------------ARP POISTIONING OUTPUT----------------------------------------/
+sudo arpspoof -i enp43s0 -t 172.17.15.30 -r 172.17.15.1
+c0:18:50:a4:56:ea 40:ec:99:eb:38:9a 0806 42: arp reply 172.17.15.1 is-at c0:18:50:a4:56:ea
+c0:18:50:a4:56:ea ---> ATTACKER MAC
+40:ec:99:eb:38:9a ---> TARGETED MAC
+172.17.15.1 --> GATEWAY IP

@@ -1,0 +1,390 @@
+.mosquitto-container {
+	flex: 1;
+}
+
+.mosquitto-header-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+.report-container--table-div {
+	padding: 10px;
+}
+
+.mosquitto-header-buttons > button {
+	background-color: #1260cc;
+	color: #fff;
+	font-weight: 500;
+	padding: 0.5rem 3.5rem;
+	outline: none;
+	border: none;
+	margin: 0.5rem;
+}
+
+.mosquitto-type-select-buttons > button {
+	background-color: #1260cc;
+	color: #fff;
+	font-weight: 500;
+	padding: 0.5rem 3.5rem;
+	outline: none;
+	border: none;
+	margin: 0.5rem;
+	border: 1px solid #1260cc;
+	transition: all 0.3s ease-in-out;
+}
+
+.mosquitto-type-select-buttons > button.active {
+	background-color: #fff;
+	color: #1260cc;
+	transform: translateY(0.5rem);
+}
+
+.mosquitto-pub-sub-headng {
+	display: flex;
+	align-items: center;
+}
+
+.mosquitto-pub-sub-headng > h3 {
+	flex: 1;
+	margin: 0;
+	margin-top: 3rem;
+	color: #1260cc;
+}
+
+.mosquitto-input {
+	width: 100%;
+	padding: 1rem;
+	outline: none;
+	color: #1260cc;
+	display: flex;
+}
+
+.mosquitto-input > form {
+	flex: 1;
+}
+
+.mosquitto-input > form > div {
+	display: flex;
+	margin: 0.5rem 0;
+	align-items: center;
+}
+
+.mosquitto-input > form > div > label {
+	display: inline-block;
+	width: 20%;
+}
+
+.mosquitto-input > form > div > input {
+	width: 70%;
+	padding: 0.5rem;
+	outline: none;
+	border: 1px solid #1260cc;
+	font-size: 0.75rem;
+}
+
+.mosquitto-output {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mosquitto-output > div {
+	flex: 1;
+	/* margin: 0rem 3rem 0rem 1rem; */
+	/* background-color: #1260cc; */
+
+	height: 20rem;
+	min-width: 80%;
+	color: #444;
+	padding: 1rem;
+	overflow: auto;
+	border-radius: 8px;
+	scroll-behavior: smooth;
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+		rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+		rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+#style-1::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: #f5f5f5;
+}
+
+#style-1::-webkit-scrollbar {
+	width: 12px;
+	background-color: #f5f5f5;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #555;
+}
+.custom-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2rem;
+}
+.custom-container h2 {
+	margin-bottom: 1rem;
+}
+.file-instruction {
+	font-weight: lighter;
+}
+.input-div {
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+		rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+		rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+	border-radius: 5px;
+	padding: 1rem;
+}
+input.file-input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5px;
+}
+.file-input {
+	margin-bottom: 1rem;
+}
+.inputbox {
+	border: 1px solid black;
+	outline: 0;
+	color: rgb(60, 66, 87);
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+		rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px,
+		rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+		rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	padding: 4px 8px;
+	min-height: 28px;
+	vertical-align: middle;
+	transition: background-color 0.24s, box-shadow 0.24s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.24s, 0.24s;
+	transition-timing-function: ease, ease;
+	transition-delay: 0s, 0s;
+	:focus {
+		box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+			rgb(58 151 212 / 36%) 0px 0px 0px 4px,
+			rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px,
+			rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+			rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+	}
+}
+.checkbox-wrapper-1 *,
+.checkbox-wrapper-1 ::after,
+.checkbox-wrapper-1 ::before {
+	box-sizing: border-box;
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted {
+	margin: 0;
+	width: 0;
+	height: 0;
+	display: inline;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted + label:before {
+	content: '';
+	display: inline-block;
+	vertical-align: top;
+	height: 1.15em;
+	width: 1.15em;
+	margin-right: 0.6em;
+	color: rgba(0, 0, 0, 0.275);
+	border: solid 0.06em;
+	box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em inset,
+		0 0 0 0.07em transparent inset;
+	border-radius: 0.2em;
+	background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>')
+			no-repeat center,
+		white;
+	background-size: 0;
+	will-change: color, border, background, background-size, box-shadow;
+	transform: translate3d(0, 0, 0);
+	transition: color 0.1s, border 0.1s, background 0.15s, box-shadow 0.1s;
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted:enabled:active + label:before,
+.checkbox-wrapper-1
+	[type='checkbox'].substituted:enabled
+	+ label:active:before {
+	box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+		0 0 0 0.07em rgba(0, 0, 0, 0.1) inset;
+	background-color: #f0f0f0;
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted:checked + label:before {
+	background-color: #3b99fc;
+	background-size: 0.75em;
+	color: rgba(0, 0, 0, 0.075);
+}
+.checkbox-wrapper-1
+	[type='checkbox'].substituted:checked:enabled:active
+	+ label:before,
+.checkbox-wrapper-1
+	[type='checkbox'].substituted:checked:enabled
+	+ label:active:before {
+	background-color: #0a7ffb;
+	color: rgba(0, 0, 0, 0.275);
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted:focus + label:before {
+	box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+		0 0 0 0.07em rgba(0, 0, 0, 0.1) inset,
+		0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted:focus:active + label:before,
+.checkbox-wrapper-1 [type='checkbox'].substituted:focus + label:active:before {
+	box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+		0 0 0 0.07em rgba(0, 0, 0, 0.1) inset,
+		0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted:disabled + label:before {
+	opacity: 0.5;
+}
+
+.checkbox-wrapper-1 [type='checkbox'].substituted.dark + label:before {
+	color: rgba(255, 255, 255, 0.275);
+	background-color: #222;
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="rgba(34, 34, 34, 0.999)" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>');
+}
+.checkbox-wrapper-1
+	[type='checkbox'].substituted.dark:enabled:active
+	+ label:before,
+.checkbox-wrapper-1
+	[type='checkbox'].substituted.dark:enabled
+	+ label:active:before {
+	background-color: #444;
+	box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+		0 0 0 0.07em rgba(255, 255, 255, 0.1) inset;
+}
+.checkbox-wrapper-1 [type='checkbox'].substituted.dark:checked + label:before {
+	background-color: #a97035;
+	color: rgba(255, 255, 255, 0.075);
+}
+.checkbox-wrapper-1
+	[type='checkbox'].substituted.dark:checked:enabled:active
+	+ label:before,
+.checkbox-wrapper-1
+	[type='checkbox'].substituted.dark:checked:enabled
+	+ label:active:before {
+	background-color: #c68035;
+	color: rgba(0, 0, 0, 0.275);
+}
+
+/* CSS */
+.button-26 {
+	appearance: button;
+	background-color: #1652f0;
+	border: 1px solid #1652f0;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: Graphik, -apple-system, system-ui, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 14px;
+	line-height: 1.15;
+	overflow: visible;
+	padding: 12px 16px;
+	position: relative;
+	text-align: center;
+	text-transform: none;
+	transition: all 80ms ease-in-out;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: fit-content;
+}
+
+.button-26:disabled {
+	opacity: 0.5;
+}
+
+.button-26:focus {
+	outline: 0;
+}
+
+.button-26:hover {
+	background-color: #0a46e4;
+	border-color: #0a46e4;
+}
+
+.button-26:active {
+	background-color: #0039d7;
+	border-color: #0039d7;
+}
+
+.button-39 {
+	background-color: #ffffff;
+	border: 1px solid rgb(209, 213, 219);
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #111827;
+	font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, system-ui,
+		'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji';
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.15;
+	padding: 12px 16px;
+	text-align: center;
+	text-decoration: none #d1d5db solid;
+	text-decoration-thickness: auto;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.button-39:hover {
+	background-color: rgb(249, 250, 251);
+}
+
+.button-39:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+	box-shadow: none;
+}
+
+.form-footer > button {
+	margin: 0.5rem;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.file-div {
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+.file-div.hidden {
+	opacity: 0;
+	transform: translateY(-10px);
+}
+.green-text {
+	color: green;
+}
+
+.grey-text {
+	color: grey;
+}

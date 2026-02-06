@@ -1,0 +1,12 @@
+PORT     STATE    SERVICE        VERSION
+21/tcp   open     ftp            oftpd
+23/tcp   open     telnet         Pocket CMD telnetd
+80/tcp   open     http           gSOAP 2.7 (HP MFP printer)
+443/tcp  open     ssl/tcpwrapped
+515/tcp  open     printer
+631/tcp  open     http           gSOAP 2.7 (HP MFP printer)
+3887/tcp filtered ciphire-data
+3910/tcp open     soap           gSOAP 2.7
+3911/tcp open     tcpwrapped
+8080/tcp open     http           gSOAP 2.7 (HP MFP printer)
+8289/tcp open     soap           gSOAP 2.7

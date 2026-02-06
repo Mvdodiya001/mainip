@@ -1,0 +1,31 @@
+rules:
+  - id: weak_cipher
+    patterns:
+      - pattern-either:
+          - pattern: |
+              $C.getInstance("=~/des|desede|rc2|rc4|blowfish/i", ...);
+          - pattern: |
+              $C = new NullCipher();
+    message: >-
+      Weak encryption algorithm identified. This algorithm is vulnerable to
+      cryptographic attacks.
+    severity: ERROR
+    languages:
+      - java
+    metadata:
+      cwe: cwe-327
+      cves:
+        - CVE-2022-30273
+        - CVE-2022-30320
+        - CVE-2008-3775
+        - CVE-2007-4150
+        - CVE-2007-5460
+        - CVE-2005-4860
+        - CVE-2002-2058
+        - CVE-2008-3188
+        - CVE-2005-2946
+        - CVE-2007-6013
+      owasp-mobile: m5
+      masvs: crypto-4
+      reference: >-
+        https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4

@@ -1,0 +1,61 @@
+{
+    "target": "192.168.1.250",
+    "nmap_results": [
+        {
+            "Rank": "No Data",
+            "Server Version": "-",
+            "Score": "-",
+            "Hits": "-"
+        }
+    ],
+    "http_responses": [
+        {
+            "method": "GET",
+            "path": "/",
+            "status": "HTTP/1.1 200 OK",
+            "headers": {
+                "CONNECTION": "close",
+                "Date": "Sun, 13 Feb 2000 06:58:17 GMT",
+                "Last-Modified": "Mon, 16 Aug 2021 02:36:53 GMT",
+                "Etag": "\"1629081413:7fd0\"",
+                "CONTENT-LENGTH": "32720",
+                "CACHE-CONTROL": "max-age=0",
+                "X-Frame-Options": "SAMEORIGIN",
+                "Strict-Transport-Security": "max-age=604800; includeSubDomains",
+                "X-XSS-Protection": "1;mode=block",
+                "Content-Security-Policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+                "X-Content-Type-Options": "nosniff",
+                "CONTENT-TYPE": "text/html"
+            }
+        },
+        {
+            "method": "GET_LONG",
+            "path": "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "error": "Remote end closed connection without response"
+        },
+        {
+            "method": "GET_NONEXISTING",
+            "path": "/404test_.html",
+            "error": "Remote end closed connection without response"
+        },
+        {
+            "method": "HEAD",
+            "path": "/",
+            "status": "HTTP/1.1 200 OK",
+            "headers": {
+                "CONNECTION": "close",
+                "Date": "Sun, 13 Feb 2000 06:58:17 GMT",
+                "Last-Modified": "Mon, 16 Aug 2021 02:36:53 GMT",
+                "Etag": "\"1629081413:7fd0\"",
+                "CONTENT-LENGTH": "32720",
+                "CACHE-CONTROL": "max-age=0",
+                "X-Frame-Options": "SAMEORIGIN",
+                "Strict-Transport-Security": "max-age=604800; includeSubDomains",
+                "X-XSS-Protection": "1;mode=block",
+                "Content-Security-Policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+                "X-Content-Type-Options": "nosniff",
+                "CONTENT-TYPE": "text/html"
+            }
+        }
+    ]
+}

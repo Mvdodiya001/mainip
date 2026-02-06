@@ -1,0 +1,31 @@
+# https://github.com/returntocorp/semgrep-rules/blob/develop/java/lang/security/xmlinputfactory-external-entities-enabled.yaml
+rules:
+  - id: xmlinputfactory_xxe_enabled
+    pattern: >-
+      $XMLFACTORY.setProperty("javax.xml.stream.isSupportingExternalEntities",
+      true);
+    message: >
+      XML external entities are enabled for this XMLInputFactory. This is
+      vulnerable to XML external entity attacks. Disable external entities by
+      setting "javax.xml.stream.isSupportingExternalEntities" to false.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: cwe-611
+      cves:
+        - CVE-2022-42745
+        - CVE-2005-1306
+        - CVE-2012-5656
+        - CVE-2012-2239
+        - CVE-2012-3489
+        - CVE-2012-4399
+        - CVE-2012-3363
+        - CVE-2012-0037
+        - CVE-2011-4107
+        - CVE-2010-3322
+        - CVE-2009-1699
+      owasp-mobile: m8
+      masvs: platform-2
+      reference: >-
+        https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2

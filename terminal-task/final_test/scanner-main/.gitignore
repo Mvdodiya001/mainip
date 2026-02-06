@@ -1,0 +1,5 @@
+venv
+scanner.egg-info
+scanner/__pycache__
+scanner/commands/__pycache__
+scanner/services/__pycache__
