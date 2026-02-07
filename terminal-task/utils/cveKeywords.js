@@ -15,7 +15,8 @@ const CVE_KEYWORDS = {
 
 	networkProtocols: [
 		'ssh', 'ftp', 'sftp', 'http', 'https', 'smtp', 'dns', 'dhcp', 'ntp',
-		'snmp', 'telnet', 'ssl', 'tls', 'tcp', 'udp', 'vpn', 'openvpn',
+		'snmp', 'telnet', 'ssl', 'tls', 'tlsv1', 'tlsv1.0', 'tlsv1.1', 'tlsv1.2', 'tlsv1.3',
+		'tcp', 'udp', 'vpn', 'openvpn', 'rtsp',
 		'wpa', 'wpa2', 'wpa3', '802.11', 'ipsec', 'l2tp', 'pptp', 'ipp', 'rpcbind'
 	],
 
@@ -36,7 +37,7 @@ const CVE_KEYWORDS = {
 
 	securityAuthentication: [
 		'kerberos', 'ldap', 'oauth', 'saml', 'radius', 'tacacs',
-		'certificate', 'crl', 'ocsp', 'cipher',
+		'certificate', 'crl', 'ocsp',
 	],
 
 	tools: [
@@ -70,9 +71,11 @@ const PORT_HEURISTICS = {
 	443: 'https',
 	445: 'smb',
 	502: 'modbus',
+	554: 'rtsp',
 	636: 'ldap',
 	993: 'imap',
 	1883: 'mqtt',
+	2020: 'tcpwrapped',
 	3306: 'mysql',
 	5432: 'postgresql',
 	6379: 'redis',

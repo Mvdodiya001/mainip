@@ -69,6 +69,15 @@ const OS = (data) => {
 		severity: 'Low',
 	};
 
+	// Fallback: if mlos (global version) is not set, try to extract it from current data
+	if (!mlos && data) {
+		const dataStr = String(data);
+		const versionMatch = dataStr.match(/:?(\d+(?:\.\d+)*)/);
+		if (versionMatch) {
+			mlos = ' ' + versionMatch[1];
+		}
+	}
+
 	if (data.includes('Windows')) {
 		result.value = 'Windows' + mlos;
 		result.severity = "Medium";
@@ -513,10 +522,7 @@ const CVEFormatter = (data) => {
 const DataToDisplay = (title, content) => {
 	// if(title ==='TTL_ML'){
 	if (title === 'OS ') {
-
-
 		return ttlml(content.text);
-
 	}
 	if (!content.text) {
 		return {
@@ -525,7 +531,6 @@ const DataToDisplay = (title, content) => {
 			severity: 'unknown',
 		};
 	}
-
 
 
 	content = content.text;
@@ -560,6 +565,19 @@ const DataToDisplay = (title, content) => {
 
 	if (title === 'SSL/TLS Certificate') {
 		return SslTlsCertificate(content);
+	}
+
+	if (title === 'SSL Version') {
+		// Format "TLSv1.2" to "TLS 1.2" for better CVE matching
+		let val = content;
+		if (val && val.includes('v')) {
+			val = val.replace(/([a-zA-Z]+)v([\d.]+)/, '$1 $2');
+		}
+		return {
+			title: 'SSL Version',
+			value: val,
+			severity: 'info'
+		};
 	}
 
 	if (title === 'Firewall') {
