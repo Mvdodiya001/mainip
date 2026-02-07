@@ -86,7 +86,7 @@ function getAllWordsWithCveStatusFromReport(report) {
 	}));
 }
 
-module.exports.getAllWordsWithCveStatusFromReport = getAllWordsWithCveStatusFromReport;
+
 const fs = require('fs');
 const path = require('path');
 const { DataToDisplay } = require('../utils/dataToDisplay');
@@ -170,7 +170,7 @@ const pickCvss = (cve) => {
 };
 
 const extractServicesFromReport = (report = []) => {
-	console.log('[CVE] extractServicesFromReport: start, report length:', Array.isArray(report) ? report.length : 0);
+	// console.log('[CVE] extractServicesFromReport: start, report length:', Array.isArray(report) ? report.length : 0);
 	const { DataToDisplay } = require('../utils/dataToDisplay');
 	const { PORT_HEURISTICS, isRelevantKeyword } = require('../utils/cveKeywords');
 	const unique = new Map();
@@ -269,16 +269,43 @@ const extractServicesFromReport = (report = []) => {
 			const token = tokens[i];
 			if (token.length < 3) continue;
 
+			// Expanded Stop Words / False Positives List
+			const STOP_WORDS = new Set([
+				'date', 'time', 'echo', 'start', 'end', 'files', 'data', 'user', 'admin', 'root',
+				'login', 'logout', 'help', 'home', 'server', 'client', 'accept', 'deny',
+				'content', 'type', 'length', 'copyright', 'welcome', 'authorized', 'use', 'only',
+				'warning', 'access', 'system', 'device', 'running', 'details', 'service',
+				'version', 'release', 'build', 'patch', 'level', 'protocol', 'transport',
+				'layer', 'port', 'tcp', 'udp', 'ttl', 'window', 'sync', 'ack', 'sequence',
+				'class', 'method', 'status', 'state', 'cipher', 'key', 'algorithm', 'session',
+				'cookie', 'token', 'auth', 'pass', 'password', 'username', 'credential',
+				'microsoft', 'corporation', 'inc', 'ltd', 'gmt', 'utc', 'mon', 'tue',
+				'wed', 'thu', 'fri', 'sat', 'sun', 'jan', 'feb', 'mar', 'apr', 'may',
+				'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec', 'netbios', 'workgroup',
+				'domain', 'master', 'browser', 'os', 'cpe', 'fingerprint', 'aggregator',
+				'cisco', 'huawei', 'juniper', // Vendors are okay if version present, but alone are noise
+				'unknown', 'none', 'null', 'undefined'
+			]);
+
 			if (cachedProducts.has(token)) {
-				const commonFalsePositives = new Set(['date', 'time', 'echo', 'start', 'end', 'files', 'data', 'user', 'admin', 'root', 'login', 'logout', 'help', 'home']);
-				if (commonFalsePositives.has(token)) {
-					const ver = extractVersion(str);
-					if (ver) {
-						addFinding(token, ver, 'dynamic-strict', portContext);
-					}
+				if (STOP_WORDS.has(token)) {
+					// Skip stop words unless they are part of a specific heuristics whitelist that MIGHT be needed
+					// For now, strict skip
+					continue;
 				} else {
+					// Strict requirement: found product must have a version to be useful
+					// Exception: Well-known software (linux, windows) might not always have version in the immediate token but we try
+					const isOS = ['linux', 'windows', 'android', 'ios', 'macos'].includes(token);
 					const ver = extractVersion(str);
-					addFinding(token, ver, 'dynamic', portContext);
+
+					if (ver) {
+						addFinding(token, ver, 'dynamic', portContext);
+					} else if (isOS) {
+						// If it's an OS, we might accept it even without a version if we really want to show it,
+						// but generally "Linux" with no version matches 1000s of CVEs.
+						// Better to show it and let matching logic filter or show "many".
+						addFinding(token, 'Any', 'dynamic-os', portContext);
+					}
 				}
 			}
 		}
@@ -495,4 +522,5 @@ module.exports = {
 	buildCvePayload,
 	extractServicesFromReport,
 	loadNvdData,
+	getAllWordsWithCveStatusFromReport
 };
