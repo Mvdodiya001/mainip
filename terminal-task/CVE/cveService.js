@@ -172,7 +172,7 @@ const pickCvss = (cve) => {
 const extractServicesFromReport = (report = []) => {
 	// console.log('[CVE] extractServicesFromReport: start, report length:', Array.isArray(report) ? report.length : 0);
 	const { DataToDisplay } = require('../utils/dataToDisplay');
-	const { PORT_HEURISTICS, isRelevantKeyword } = require('../utils/cveKeywords');
+	const { PORT_HEURISTICS, isRelevantKeyword, getAllKeywords } = require('../utils/cveKeywords');
 	const unique = new Map();
 
 	// Load relevant keywords
@@ -252,6 +252,7 @@ const extractServicesFromReport = (report = []) => {
 				addFinding(name, ver, 'regex-generic', portContext);
 			}
 		}
+
 
 		// B. Whitelist Match
 		let wMatch = whitelistRegex.exec(lower);
@@ -371,8 +372,6 @@ const extractServicesFromReport = (report = []) => {
 		'unknown',
 		'not possible',
 		'not found',
-		'0',
-		'false',
 		'firewall',
 	];
 
@@ -383,9 +382,14 @@ const extractServicesFromReport = (report = []) => {
 
 		if (typeof obj === 'string') {
 			const lower = obj.toLowerCase().trim();
+
+			// Strict check for single-value noise
+			if (lower === '0' || lower === 'false') return;
+
 			// Filter negative values
 			const isNegative = SKIP_PHRASES.some(phrase => lower.includes(phrase));
 			if (isNegative) return;
+
 			// Filter extremely short junk
 			if (lower.length < 2) return;
 
@@ -422,7 +426,7 @@ const extractServicesFromReport = (report = []) => {
 	});
 
 	const result = Array.from(unique.values());
-	console.log('[CVE] extractServicesFromReport: end, found services:', result.length);
+	// console.log('[CVE] extractServicesFromReport: end, found services:', result.length);
 	return result;
 };
 
