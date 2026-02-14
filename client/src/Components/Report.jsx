@@ -53,7 +53,7 @@ export default function Report(props) {
 			</div>
 			<Container className='report-container'>
 				<div className='report-container-heading d-flex justify-content-between align-items-start flex-wrap'>
-					<div>
+					<div className="d-flex align-items-center">
 						<div className='report-container-heading-text'>REPORT</div>
 						<div className='report-addr'>
 							<div className='ip'>

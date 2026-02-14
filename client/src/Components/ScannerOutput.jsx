@@ -43,6 +43,7 @@ export default function ScannerOutput(props) {
                                 rel="noreferrer noopener"
                                 onClick={handleDownloadDetailedReport}
                                 className="report-download"
+                                style={{ cursor: 'pointer', color: 'blue', textDecoration: 'underline' }}
                             >
                                 here
                             </a>

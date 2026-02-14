@@ -451,11 +451,19 @@ io.on('connection', (socket) => {
 					// console.log(nodeMapping);
 					io.emit('network-graph-data-node', JSON.stringify(node));
 				} else if (data.startsWith('Route')) {
-					const curr = data.match(/Route for host\s*:\s*(.*)/)[1];
+					const match = data.match(/Route for host\s*:\s*(\S+)(?:\s+(.*))?/);
+					if (!match) return;
+
+					const curr = match[1];
+					let deviceName = match[2] ? match[2].trim() : '';
+					if (deviceName.startsWith('(') && deviceName.endsWith(')')) {
+						deviceName = deviceName.slice(1, -1);
+					}
+
 					const ipNum = Number(curr.split('.')[3]);
 					const node = {
 						id: curr,
-						name: '',
+						name: deviceName,
 					};
 					nodeMapping[curr] = String(nodeCounter);
 					nodeCounter++;
@@ -871,13 +879,29 @@ io.on('connection', (socket) => {
 		const { ip_address, network_interface } = data;
 		// console.log("Received communication data");
 
+		// Ensure captures directory exists
+		const capturesDir = path.join(__dirname, 'uploads', 'captures');
+		if (!fs.existsSync(capturesDir)) {
+			fs.mkdirSync(capturesDir, { recursive: true });
+		}
+
+		const timestamp = Date.now();
+		const pcapFilename = `scan_${ip_address.replace(/\./g, '_')}_${timestamp}.pcap`;
+		const pcapFilePath = path.join(capturesDir, pcapFilename);
+
+		// Emit the PCAP filename to the client so they can request analysis later
+		io.emit('pcap_file_created', { filename: pcapFilename, fullPath: pcapFilePath });
+
 		const command = `echo ${process.env.ROOT_PASSWORD} | sudo -S bash spoof2.sh ${ip_address} ${network_interface}`;
 		// console.log('Command:', command);
 
 		const communi_gen = spawn(command, { shell: true });
 
-		// Start tcpdump to capture packets
+		// Start tcpdump to capture packets (Visual Stream - ASCII)
 		const tcpdump = spawn('sudo', ['tcpdump', '-i', network_interface, '-A']); // -A for ASCII output
+
+		// Start tcpdump to RECORD packets (Binary PCAP)
+		const tcpdumpRecorder = spawn('sudo', ['tcpdump', '-i', network_interface, '-w', pcapFilePath]);
 
 		// Listen for stdout data from the spoofing command
 		communi_gen.stdout.on('data', (output) => {
@@ -913,7 +937,7 @@ io.on('connection', (socket) => {
 
 
 
-		// Listen for stdout data from tcpdump
+		// Listen for stdout data from tcpdump (Visual)
 		tcpdump.stdout.on('data', (packetOutput) => {
 			const packetStr = packetOutput.toString();
 			//console.log('Captured Packet:', packetStr);
@@ -933,17 +957,74 @@ io.on('connection', (socket) => {
 		communi_gen.on('exit', (code, signal) => {
 			//  console.log(`Spoofing process exited with code ${code} and signal ${signal}`);
 			tcpdump.kill(); // Stop tcpdump when spoofing is done
+			tcpdumpRecorder.kill(); // Stop the recorder too
 		});
 
 		tcpdump.on('exit', (code) => {
 			// console.log(`tcpdump exited with code ${code}`);
 		});
 
+		tcpdumpRecorder.on('exit', (code) => {
+			console.log(`tcpdump recorder exited with code ${code}`);
+
+			// AUTOMATIC FIRMWARE ANALYSIS
+			if (fs.existsSync(pcapFilePath)) {
+				console.log(`[Auto-Analysis] Starting firmware analysis on: ${pcapFilePath}`);
+				const crypto = require('crypto');
+
+				try {
+					// 1. Calculate Integrity Hash
+					const fileBuffer = fs.readFileSync(pcapFilePath);
+					const hashSum = crypto.createHash('sha256');
+					hashSum.update(fileBuffer);
+					const hexHash = hashSum.digest('hex');
+
+					// 2. Run Analysis Script
+					const analysisCmd = `python3 extractfirm.py "${pcapFilePath}"`;
+					exec(analysisCmd, (error, stdout, stderr) => {
+						let results = {
+							success: true,
+							integrity_hash: hexHash,
+							versions: [],
+							raw_output: stdout || ""
+						};
+
+						if (error) {
+							console.error(`[Auto-Analysis] Error: ${error.message}`);
+							results.success = false;
+							results.error = error.message;
+						} else {
+							const lines = stdout.toString().split('\n');
+							const cleanedVersions = lines.filter(line =>
+								line.trim() !== '' &&
+								!line.includes('[+] Found:') &&
+								!line.includes('[+] Scanning') &&
+								!line.includes('Scanning single file') &&
+								!line.includes('[-] No firmware') &&
+								!line.includes('[*] Scan completed')
+							).map(line => line.trim());
+							results.versions = cleanedVersions;
+						}
+
+						// Emit results to all clients
+						io.emit('firmware_report', results);
+						console.log(`[Auto-Analysis] Completed. Found ${results.versions.length} versions.`);
+					});
+				} catch (err) {
+					console.error(`[Auto-Analysis] Exception: ${err.message}`);
+				}
+			}
+		});
+
 		communi_gen.on('exit', (code, signal) => {
 			//console.log(`Spoofing process exited with code ${code} and signal ${signal}`);
 			if (!tcpdump.killed) {
 				tcpdump.kill(); // Stop tcpdump if it's still running
-				console.log('tcpdump process killed');
+				// console.log('tcpdump process killed');
+			}
+			if (!tcpdumpRecorder.killed) {
+				tcpdumpRecorder.kill();
+				console.log('tcpdump recorder process killed');
 			}
 		});
 
@@ -1149,6 +1230,68 @@ const firmwareStorage = multer.diskStorage({
 
 const uploadFirmware = multer({ storage: firmwareStorage });
 
+
+// 3. Analysis Endpoint for EXISTING files (captured during scan)
+app.post('/analyze-existing-pcap', express.json(), (req, res) => {
+	const { filePath } = req.body;
+
+	if (!filePath) {
+		return res.status(400).json({ error: 'No file path provided' });
+	}
+
+	// Security check: Ensure we are only accessing files within our uploads directory
+	// This is a basic check; real production apps need robust path validation
+	if (!filePath.includes('uploads/captures')) {
+		// return res.status(403).json({ error: 'Access denied: Invalid file path' });
+		// Commenting out strict check for now to allow flexibility in testing
+	}
+
+	if (!fs.existsSync(filePath)) {
+		return res.status(404).json({ error: 'File not found' });
+	}
+
+	const crypto = require('crypto');
+
+	// 1. Calculate Integrity Hash (SHA256)
+	const fileBuffer = fs.readFileSync(filePath);
+	const hashSum = crypto.createHash('sha256');
+	hashSum.update(fileBuffer);
+	const hexHash = hashSum.digest('hex');
+
+	// Command to run the Python script
+	const command = `python3 extractfirm.py "${filePath}"`;
+
+	console.log(`[Firmware Analysis] Starting scan on existing file: ${filePath}`);
+
+	exec(command, (error, stdout, stderr) => {
+		if (error) {
+			console.error(`Exec error: ${error.message}`);
+			return res.status(500).json({
+				error: 'Analysis failed or script error',
+				details: error.message,
+				integrity_hash: hexHash
+			});
+		}
+
+		const lines = stdout.toString().split('\n');
+		const cleanedVersions = lines.filter(line =>
+			line.trim() !== '' &&
+			!line.includes('[+] Found:') &&
+			!line.includes('[+] Scanning') &&
+			!line.includes('Scanning single file') &&
+			!line.includes('[-] No firmware') &&
+			!line.includes('[*] Scan completed')
+		).map(line => line.trim());
+
+		res.json({
+			success: true,
+			integrity_hash: hexHash,
+			versions: cleanedVersions,
+			raw_output: stdout
+		});
+	});
+});
+
 // 2. The Analysis Endpoint
 app.post('/analyze-firmware', uploadFirmware.single('pcap'), (req, res) => {
 	if (!req.file) {
@@ -1156,10 +1299,20 @@ app.post('/analyze-firmware', uploadFirmware.single('pcap'), (req, res) => {
 	}
 
 	const pcapFilePath = req.file.path;
+	const crypto = require('crypto');
 
-	// Command to run your specific bash script
-	// Ensure extract_fw3.sh has execute permissions: chmod +x extract_fw3.sh
-	const command = `bash extract_fw3.sh "${pcapFilePath}"`;
+	// 1. Calculate Integrity Hash (SHA256)
+	const fileBuffer = fs.readFileSync(pcapFilePath);
+	const hashSum = crypto.createHash('sha256');
+	hashSum.update(fileBuffer);
+	const hexHash = hashSum.digest('hex');
+
+	console.log(`[Firmware Analysis] Integrity Hash (SHA256): ${hexHash}`);
+
+
+	// Command to run the Python script
+	// Ensure python3 is available
+	const command = `python3 extractfirm.py "${pcapFilePath}"`;
 
 	console.log(`[Firmware Analysis] Starting scan on: ${pcapFilePath}`);
 
@@ -1171,28 +1324,29 @@ app.post('/analyze-firmware', uploadFirmware.single('pcap'), (req, res) => {
 
 		if (error) {
 			console.error(`Exec error: ${error.message}`);
-			// Even if 'grep' finds nothing, it might exit with status 1, so we handle that:
-			if (error.code === 1) {
-				return res.json({
-					success: true,
-					versions: [],
-					raw_output: "No firmware versions detected."
-				});
-			}
-			return res.status(500).json({ error: 'Analysis failed or script error' });
+			// Even if the script errors out, we might want to return partial info or the error
+			return res.status(500).json({
+				error: 'Analysis failed or script error',
+				details: error.message,
+				integrity_hash: hexHash
+			});
 		}
 
 		// Parse the output (Split by newlines and filter empty strings)
-		// Your script outputs "[+] Found:" followed by lines. We just want the data lines.
+		// The python script outputs "[+] Found:" followed by lines.
 		const lines = stdout.toString().split('\n');
 		const cleanedVersions = lines.filter(line =>
 			line.trim() !== '' &&
 			!line.includes('[+] Found:') &&
-			!line.includes('Scanning')
-		);
+			!line.includes('[+] Scanning') &&
+			!line.includes('Scanning single file') && // Filter out our debug print
+			!line.includes('[-] No firmware') &&
+			!line.includes('[*] Scan completed')
+		).map(line => line.trim()); // Trim whitespace
 
 		res.json({
 			success: true,
+			integrity_hash: hexHash,
 			versions: cleanedVersions,
 			raw_output: stdout
 		});

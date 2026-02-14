@@ -4,11 +4,11 @@ enp2s0    no wireless extensions.
 
 wlp0s20f3  IEEE 802.11  ESSID:"TP-Link_DA26"  
           Mode:Managed  Frequency:2.427 GHz  Access Point: 6C:5A:B0:FC:DA:26   
-          Bit Rate=130 Mb/s   Tx-Power=22 dBm   
+          Bit Rate=144.4 Mb/s   Tx-Power=22 dBm   
           Retry short limit:7   RTS thr:off   Fragment thr:off
           Encryption key:off
           Power Management:on
-          Link Quality=67/70  Signal level=-43 dBm  
+          Link Quality=60/70  Signal level=-50 dBm  
           Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
-          Tx excessive retries:0  Invalid misc:51   Missed beacon:0
+          Tx excessive retries:0  Invalid misc:53   Missed beacon:0
 

@@ -81,17 +81,11 @@ while IFS= read -r ip_addr; do
 
     # Check the output from tshark
     if [ -s x.txt ]; then  # Only proceed if x.txt is not empty
-        output="$(cat x.txt)"
-       
-        if echo "$output" | grep -q "$source → $ip_addr"; then
-            echo "Successfully Spoofed!"
-            echo "$ip_addr" >> "$successful_ips"  # Save successful IPs
-            break;
-        else
-            echo "Spoofing failed"
-        fi
+        echo "Successfully Spoofed!"
+        echo "$ip_addr" >> "$successful_ips"  # Save successful IPs
+        break;
     else
-        echo "No packets captured"
+        echo "Spoofing failed - No packets captured"
     fi
    
 

@@ -259,7 +259,7 @@ const CveAnalysis = () => {
 			{cvesByKeyword.map((entry, index) => (
 				<KeywordAccordion
 					key={`${entry.service}-${entry.port}-${index}`}
-					keyword={`${entry.service}${entry.version && entry.version !== 'Any' ? ` · ${entry.version}` : ''}${entry.port ? ` · Port ${entry.port}` : ''}`}
+					keyword={`${entry.service}${entry.version && entry.version !== 'Any' ? ` · ${entry.version}` : ''}`}
 					cves={entry.cves}
 					defaultOpen={cvesByKeyword.length <= 2}
 					onCveClick={handleCveClick}

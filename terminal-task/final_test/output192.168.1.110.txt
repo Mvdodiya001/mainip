@@ -1,6 +1,0 @@
-PORT     STATE    SERVICE        VERSION
-80/tcp   open     ssl/http
-443/tcp  open     ssl/https?
-515/tcp  open     printer?
-631/tcp  open     ssl/ipp
-5200/tcp filtered targus-getdata

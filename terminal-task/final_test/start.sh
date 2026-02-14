@@ -50,12 +50,24 @@
  echo "#****************Telnet*************************"
  sudo bash telnet.sh $ip_addr 80
 
+ echo "#****************Firmware Analysis*****************"
+ python3 ../extractfirm.py "final_proj_3/test$ip_addr.pcap"
+ sudo rm "final_proj_3/test$ip_addr.pcap"
+
  # echo "#****************NUCLEI TEST*****************"
  # sudo ./nuclei -u $ip_addr -json
  # echo "#****************CVE*****************"
  # python3 cve.py dropbear 2017.75 $ip_addr
 
  
+
+
+ echo "#****************Trace Route*************************"
+ sudo python3 traceroute.py $ip_addr 
+ 
+ echo "#****************UDP*************************"
+ sudo gcc udp.c -o udp
+ sudo ./udp $ip_addr
 
  sudo rm output$ip_addr.txt
  sudo rm portlist$ip_addr.txt

@@ -7,19 +7,27 @@ const FirmwareAnalyzer = () => {
   const [error, setError] = useState('');
 
   const handleFileChange = (e) => {
-    setSelectedFile(e.target.files[0]);
-    setError('');
-    setAnalysisResult(null);
+    const file = e.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      setError('');
+      setAnalysisResult(null);
+      // Automatically trigger upload/scan
+      handleUpload(file);
+    }
   };
 
-  const handleUpload = async () => {
-    if (!selectedFile) {
+  const handleUpload = async (fileToUpload) => {
+    // Use the passed file or fall back to state (for manual button if we kept it)
+    const file = fileToUpload || selectedFile;
+
+    if (!file) {
       setError('Please select a .pcap file first.');
       return;
     }
 
     const formData = new FormData();
-    formData.append('pcap', selectedFile);
+    formData.append('pcap', file);
 
     setLoading(true);
     setError('');
@@ -52,16 +60,18 @@ const FirmwareAnalyzer = () => {
       </h2>
 
       <div style={{ margin: '20px 0', display: 'flex', gap: '10px' }}>
-        <input 
-          type="file" 
-          accept=".pcap, .pcapng, .cap" 
+        <input
+          type="file"
+          accept=".pcap, .pcapng, .cap"
           onChange={handleFileChange}
-          style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px', flex: 1 }} 
+          style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px', flex: 1 }}
         />
-        <button 
-          onClick={handleUpload} 
+        {/* Button hidden as scanning is automatic now */}
+        <button
+          onClick={() => handleUpload(selectedFile)}
           disabled={loading}
           style={{
+            display: 'none', // Hidden but kept in code just in case
             padding: '10px 20px',
             backgroundColor: loading ? '#ccc' : '#007bff',
             color: 'white',
@@ -83,7 +93,7 @@ const FirmwareAnalyzer = () => {
       {analysisResult && (
         <div className="results-area">
           <h3>Analysis Results</h3>
-          
+
           {analysisResult.versions && analysisResult.versions.length > 0 ? (
             <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '10px', background: 'white' }}>
               <thead>

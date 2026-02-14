@@ -98,8 +98,7 @@ spoofingReq="$(sudo hping3 -a '172.31.2.4' $ip_addr -1 &> /dev/null &)"
 
 sleep 60
 
-output="$(cat test.txt | grep -a -w "ICMP echo reply" | grep -w $ip_addr | grep -w '172.31.2.4' -m 1)"
-
+output=$(grep -a "ICMP echo reply" test.txt | grep -w "$ip_addr" | grep -m 1 "172.31.2.4")
 if [ "$output" != '' ]
 then
 	echo "ARP Poisoning Successfully Possible."

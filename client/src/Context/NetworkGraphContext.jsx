@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { socket } from './Socket';
 import { useErrorHandler } from './ErrorContext';
-import { throttle } from 'lodash';
 
 const NetworkGraphContext = createContext();
 
@@ -59,16 +58,16 @@ const NetworkGraphUtility = ({ children }) => {
     });
   }, [deviceNameCache, addError]);
 
-  const handleNodeData = useCallback(throttle((data) => {
+  const handleNodeData = useCallback((data) => {
     try {
       const parsedData = JSON.parse(data);
       setNetworkGraphNodes((prevNodes) => [...prevNodes, parsedData]);
     } catch (err) {
       console.error('Failed to parse node data:', err);
     }
-  }, 200), []);
+  }, []);
 
-  const handleEdgeData = useCallback(throttle((data) => {
+  const handleEdgeData = useCallback((data) => {
     try {
       const parsedData = JSON.parse(data);
       const regex = /^(?=\d+\.\d+\.\d+\.\d+$)(?:(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.?){4}$/;
@@ -79,7 +78,7 @@ const NetworkGraphUtility = ({ children }) => {
     } catch (err) {
       console.error('Failed to parse edge data:', err);
     }
-  }, 200), []);
+  }, []);
 
   useEffect(() => {
     socket.on('network-graph-data-node', handleNodeData);

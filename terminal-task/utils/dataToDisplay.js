@@ -570,13 +570,33 @@ const DataToDisplay = (title, content) => {
 	if (title === 'SSL Version') {
 		// Format "TLSv1.2" to "TLS 1.2" for better CVE matching
 		let val = content;
-		if (val && val.includes('v')) {
-			val = val.replace(/([a-zA-Z]+)v([\d.]+)/, '$1 $2');
+		let severity = 'info';
+
+		if (val) {
+			// Extract version number like 1.2 from TLSv1.2 or TLS 1.2
+			const match = val.match(/v?(\d+\.\d+)/);
+			if (match) {
+				const versionStr = match[1];
+				const version = parseFloat(versionStr);
+
+				if (version <= 1.1) {
+					severity = 'High';
+				} else if (version === 1.2) {
+					severity = 'Medium';
+				} else if (version > 1.2) {
+					severity = 'Low';
+				}
+			}
+
+			if (val.includes('v')) {
+				val = val.replace(/([a-zA-Z]+)v([\d.]+)/, '$1 $2');
+			}
 		}
+
 		return {
 			title: 'SSL Version',
 			value: val,
-			severity: 'info'
+			severity: severity
 		};
 	}
 
@@ -617,11 +637,59 @@ const DataToDisplay = (title, content) => {
 	// 	return Cipher(content);
 	// }
 
+	if (title === 'UDP') {
+		return UDP(content);
+	}
+
 	return {
 		title: title,
 		value: content,
 		severity: 'unknown',
 	};
+};
+
+const UDP = (data) => {
+	const lines = data.split('\n');
+	const result = [];
+
+	// Skip header row if present (PORT STATE SERVICE)
+	// Filter out empty lines
+	lines.forEach(line => {
+		if (!line.trim() || line.includes('PORT') && line.includes('STATE')) return;
+
+		const parts = line.split(/\s+/).filter(p => p);
+		if (parts.length >= 3) {
+			const port = parts[0];
+			const state = parts[1];
+			// Join the rest as service name in case it has spaces
+			const service = parts.slice(2).join(' ');
+
+			let severity = 'info';
+			if (state.includes('OPEN')) {
+				severity = 'High'; // Open UDP ports can be risky
+			} else if (state.includes('FILTERED')) {
+				severity = 'Medium';
+			} else {
+				severity = 'Low';
+			}
+
+			result.push({
+				title: `Port ${port} (${service})`,
+				value: state,
+				severity: severity
+			});
+		}
+	});
+
+	if (result.length === 0) {
+		return {
+			title: 'UDP Services',
+			value: 'No open/filtered UDP ports found.',
+			severity: 'Low'
+		};
+	}
+
+	return result;
 };
 
 const port443 = (data) => {

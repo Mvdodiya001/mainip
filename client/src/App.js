@@ -110,8 +110,8 @@ function App() {
 
 
 				</Routes>
+				<Footer />
 			</Router>
-			<Footer />
 		</div>
 	);
 }

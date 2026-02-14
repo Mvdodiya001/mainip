@@ -2,6 +2,9 @@ const Ports = (data) => {
 	const result = [];
 
 	try {
+		if (!Array.isArray(data)) {
+			return result;
+		}
 		data.forEach((portData) => {
 			const { title, severity, value } = portData;
 

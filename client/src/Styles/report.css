@@ -33,24 +33,19 @@
 }
 
 .report-container-heading-text {
-	padding-right: 3rem;
+	padding-right: 2rem;
 	color: rgb(var(--bs-primary-rgb));
 	font-size: 2rem;
 	font-weight: 300;
-	margin-bottom: auto;
-	height: 100%;
-	display: inline-block;
-	width: 20%;
 }
 
 .report-addr {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	display: inline-block;
-	width: 80%;
 	padding-bottom: 0.5rem;
 	border-bottom: 1px solid rgb(var(--bs-primary-rgb));
+	flex: 1;
 }
 
 .ip {

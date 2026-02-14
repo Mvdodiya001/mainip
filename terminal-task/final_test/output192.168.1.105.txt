@@ -1,1 +1,5 @@
-
+PORT     STATE SERVICE                  VERSION
+22/tcp   open  ssh                      OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+23/tcp   open  telnet                   Linux telnetd
+111/tcp  open  rpcbind                  2-4 (RPC #100000)
+1883/tcp open  mosquitto version 2.0.11

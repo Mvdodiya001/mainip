@@ -1,0 +1,54 @@
+undefined-----------------------------------------------
+TESTING STARTED FOR 192.168.1.103
+-----------------------------------------------
+#*****************Host Name*******************
+HPB0227A5B8C4C.local
+#*****************WiFi Interface Info*******************
+Wireless adapter found
+Frequency: 2.427 GHz
+IEEE Protocol: 802.11i/WPA2
+#*********************TTL_ML**********************
+Unknown
+#*********************TTL**********************
+Packet Received = 4
+Packet Not-Received = 0
+TTL Value = 64
+Guess: Linux Distribution
+#*********************MAC**********************
+b0:22:7a:5b:8c:4c
+#*******************PORTS**********************
+PORT     STATE SERVICE         VERSION
+80/tcp   open  ssl/http
+443/tcp  open  ssl/https?
+515/tcp  open  printer?
+631/tcp  open  ssl/ipp
+5200/tcp open  targus-getdata?
+#****************SSL Version*****************
+TLSv1.2
+#******************SSL/TLS Certificate********************
+notBefore=Jul 1 00:00:00 2016 GMT notAfter=Jul 1 00:00:00 2036 GMT subject=O = HP, OU = HP, CN = HPB0227A5B8C4C, ST = STATE, L = HP, C = CN, emailAddress = HPB0227A5B8C4C@HPB0227A5B8C4C.Local issuer=O = HP, OU = HP, CN = HPB0227A5B8C4C, ST = STATE, L = HP, C = CN, emailAddress = HPB0227A5B8C4C@HPB0227A5B8C4C.Local Certificate will not expire
+Certificate validation successful.
+#******************Firewall********************
+Firewall is not running [Possibly]
+#******************Cipher********************
+Cipher Suite used: 0000
+Vulnerable or Blacklisted ciphersuite or No Encryption or Unknown: 0000
+#*****************SYNC Check*******************
+Synch [Only if time difference is displayed]
+#*****************ARP Poisoning****************
+Gateway =  192.168.1.1
+Not Possible
+#*****************Device Fingerprinting****************
+Socket created.
+Local source IP is 192.168.1.104 
+Starting sniffer thread...
+Starting to send syn packets
+Sniffer initialising...
+192.168.1.103 test192.168.1.103.pcap
+Name of the vendor : HP Inc.
+Device type : Printer / Unknown
+#****************Certificate Weaknesses*****************
+* SSL certificate problem: EE certificate key too weak
+#****************Telnet*************************
+Connection successful!
+---------------TEST COMPLETED------------------

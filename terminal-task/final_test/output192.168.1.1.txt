@@ -1,5 +1,0 @@
-PORT     STATE SERVICE    VERSION
-22/tcp   open  ssh        Dropbear sshd 2017.75 (protocol 2.0)
-23/tcp   open  tcpwrapped
-80/tcp   open  http
-1900/tcp open  upnp       Portable SDK for UPnP devices 1.6.19 (Linux 2.6.36; UPnP 1.0)

@@ -13,7 +13,6 @@ if [ ! -f "$FILE" ]; then
     exit 1
 fi
 
-echo "[*] Scanning $FILE..."
 
 # 2. The Extraction Logic
 # -----------------------

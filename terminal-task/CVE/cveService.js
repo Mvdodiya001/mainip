@@ -312,7 +312,8 @@ const extractServicesFromReport = (report = []) => {
 		}
 	};
 
-	// D. Port Heuristics (Explicit Check)
+	// D. Port Heuristics (Explicit Check) - DISABLED as per user request
+	/*
 	const portsEntry = report.find((entry) => entry?.title === 'PORTS');
 	if (portsEntry) {
 		let portData = Array.isArray(portsEntry.dataToDisplay)
@@ -364,6 +365,7 @@ const extractServicesFromReport = (report = []) => {
 			}
 		});
 	}
+	*/
 
 	// Negative phrases to ignore in values
 	const SKIP_PHRASES = [
@@ -373,6 +375,7 @@ const extractServicesFromReport = (report = []) => {
 		'not possible',
 		'not found',
 		'firewall',
+		'no firmware',
 	];
 
 	// Traverse everything else
@@ -414,7 +417,7 @@ const extractServicesFromReport = (report = []) => {
 	};
 
 	(report || []).forEach((entry, idx) => {
-		if (entry.title === 'PORTS') return; // Handled explicitly
+		if (entry.title === 'PORTS') return; // Handled explicitly (DISABLED NOW)
 
 		// For all other sections:
 		// User Rule: "I don't want names like firewall... instead I want their value field"

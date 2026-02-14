@@ -1,56 +1,60 @@
-# !/bin/bash
-default_channel=$(ip r | grep default | awk '{print $5}')
+#!/bin/bash
 
-IFS=$'\n' read -d '' -r -a channels <<< "$default_channel"
+# 1. Get Default Gateway
+GATEWAY=$(ip route | grep default | head -n 1 | awk '{print $3}')
 
-channel=${channels[0]}
-# echo $channel
+if [ -z "$GATEWAY" ]; then
+    echo "Error: Gateway not found"
+    exit 1
+fi
 
-subnet_mask_1=$(ip a | grep $channel | grep inet | awk '{print $2}')
-IFS='/' read -r subnet_mask_1 subnet_mask__back <<< "$subnet_mask_1"
+echo "Router IP: $GATEWAY"
 
-broadcast_addr=$(ip a | grep $channel | grep inet | awk '{print $4}')
+# 2. Get Local CIDR (IP/Mask)
+# This finds the IP and mask of the interface used for the default route
+INTERFACE=$(ip route | grep default | head -n 1 | awk '{print $5}')
+CIDR=$(ip -o -f inet addr show dev "$INTERFACE" | awk '{print $4}' | head -n 1)
 
-subnet_mask_2=$(ifconfig | grep $broadcast_addr | awk '{print $4}')
-IFS=' ' read -r -a subnet_mask_2 <<< "$subnet_mask_2"
+# Failback if CIDR is empty
+if [ -z "$CIDR" ]; then
+    # Last resort: assume /24 of local IP
+    LOCAL_IP=$(ip route get 1.1.1.1 | awk '{print $7}')
+    CIDR="${LOCAL_IP%.*}.0/24"
+fi
 
-IFS=_. read -r subnet_octet_1 subnet_octet_2 subnet_octet_3 subnet_octet_4 <<< "$subnet_mask_2"
-IFS=_. read -r octet_1 octet_2 octet_3 octet_4 <<< "$subnet_mask_1"
-
-start_octet_1=$((octet_1 & subnet_octet_1))
-start_octet_2=$((octet_2 & subnet_octet_2))
-start_octet_3=$((octet_3 & subnet_octet_3))
-start_octet_4=$((octet_4 & subnet_octet_4))
-subnet_addr=$start_octet_1.$start_octet_2.$start_octet_3.$start_octet_4
-
-IFS=_. read -r end_octet_1 end_octet_2 end_octet_3 end_octet_4 <<< "$broadcast_addr"
-
-echo "Router IP: "$subnet_addr
-
-for ((i=$start_octet_1; i<=$end_octet_1; i++))
-do
-    for ((j=$start_octet_2; j<=$end_octet_2; j++))
-    do
-        for ((k=$start_octet_3; k<=$end_octet_3; k++))
-        do
-            for ((l=$start_octet_4; l<=$end_octet_4; l++))
-            do
-                host=$i.$j.$k.$l
-                if [ $host != $broadcast_addr ]
-                then
-                    if [ $host != $subnet_addr ]
-                    then
-                        if fping -c 1 "$host" &>/dev/null
-                        then
-                            echo "Route for host: "$host
-                            # traceroute $host
-                            output=$(traceroute $host -m 5 | grep -E '^\s*[0-9]+\s+' | awk '{print $2}')
-                            # traceroute $host -m 5 | grep -E '^\s*[0-9]+\s+' | awk '{print $2}'
-                            echo $output
-                        fi
-                    fi
-                fi
-            done
-        done
-    done
-done
+# 3. Active Scan with nmap (ping scan, no DNS, fast)
+# Output format: "Nmap scan report for 192.168.1.1"
+# We use sudo for better discovery (ARP scan) if available, but script runs as root via server.js sudo call anyway.
+# -sn: Ping Scan
+# We remove -oG to get standard output with MAC info
+# We pass variables to awk
+nmap -sn "$CIDR" | awk -v gateway="$GATEWAY" -v local="$LOCAL_IP" '
+/Nmap scan report for/{
+    # Field could be "for <IP>" or "for <Hostname> (<IP>)"
+    # We want the IP. It is usually the last field in parens, or last field if no parens.
+    if ($NF ~ /^\(/) {
+            # Case: report for Hostname (IP)
+            ip=$NF
+            gsub(/[()]/, "", ip)
+            name=$(NF-1) # Hostname
+    } else {
+            # Case: report for IP
+            ip=$NF
+            name=""
+    }
+}
+/MAC Address:/{
+    # Vendor is everything after MAC address
+    # Line format: MAC Address: 00:11:22:33:44:55 (Vendor Name)
+    vendor=$0
+    sub(/.*MAC Address: ..:..:..:..:..:.. /, "", vendor)
+    
+    # Output logic
+    if (ip != gateway && ip != local) {
+        # Use vendor if available, else hostname
+        label = vendor ? vendor : name
+        print "Route for host: " ip " " label
+        print ip
+    }
+}
+'
