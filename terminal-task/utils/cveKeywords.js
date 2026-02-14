@@ -14,8 +14,8 @@ const CVE_KEYWORDS = {
 	],
 
 	networkProtocols: [
-		'ssh', 'ftp', 'sftp', 'http', 'smtp', 'dns', 'dhcp', 'ntp',
-		'snmp', 'telnet', 'tls', 'tlsv1', 'tlsv1.0', 'tlsv1.1', 'tlsv1.2', 'tlsv1.3',
+		'ftp', 'sftp', 'smtp', 'dns', 'dhcp', 'ntp',
+		'snmp', 'tls', 'tlsv1', 'tlsv1.0', 'tlsv1.1', 'tlsv1.2', 'tlsv1.3',
 		'vpn', 'openvpn',
 		'wpa', 'wpa2', 'wpa3', '802.11', 'ipsec', 'l2tp', 'pptp', 'ipp', 'rpcbind'
 	],
@@ -32,7 +32,7 @@ const CVE_KEYWORDS = {
 
 	iotProtocols: [
 		'mqtt', 'coap', 'zigbee', 'zwave', 'bluetooth', 'ble', 'lora',
-		'modbus', 'profinet', 'ethernet', 'can', 'serial',
+		'modbus', 'profinet', 'ethernet', 'can', 'serial', 'upnp',
 	],
 
 	securityAuthentication: [
@@ -43,7 +43,7 @@ const CVE_KEYWORDS = {
 	tools: [
 		'openssh', 'openssl', 'curl', 'wget', 'git', 'docker', 'kubernetes',
 		'jenkins', 'gitea', 'grafana', 'elasticsearch', 'kibana', 'logstash',
-		'influxdb', 'prometheus', 'mosquitto', 'rabbitmq', 'kafka',
+		'influxdb', 'prometheus', 'mosquitto', 'rabbitmq', 'kafka', 'dropbear',
 	],
 
 	commonSoftware: [
@@ -54,24 +54,19 @@ const CVE_KEYWORDS = {
 
 const PORT_HEURISTICS = {
 	21: 'ftp',
-	22: 'ssh',
-	23: 'telnet',
 	25: 'smtp',
 	53: 'dns',
 	67: 'dhcp',
 	68: 'dhcp',
 	69: 'tftp',
-	80: 'http',
 	111: 'rpcbind',
 	123: 'ntp',
 	143: 'imap',
 	161: 'snmp',
 	162: 'snmp',
 	389: 'ldap',
-	443: 'https',
 	445: 'smb',
 	502: 'modbus',
-	554: 'rtsp',
 	636: 'ldap',
 	993: 'imap',
 	1883: 'mqtt',
@@ -79,8 +74,6 @@ const PORT_HEURISTICS = {
 	3306: 'mysql',
 	5432: 'postgresql',
 	6379: 'redis',
-	8080: 'http',
-	8443: 'https',
 	27017: 'mongodb',
 };
 

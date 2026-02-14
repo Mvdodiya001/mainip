@@ -175,6 +175,25 @@ const extractServicesFromReport = (report = []) => {
 	const { PORT_HEURISTICS, isRelevantKeyword, getAllKeywords } = require('../utils/cveKeywords');
 	const unique = new Map();
 
+	// Expanded Stop Words / False Positives List
+	const STOP_WORDS = new Set([
+		'date', 'time', 'echo', 'start', 'end', 'files', 'data', 'user', 'admin', 'root',
+		'login', 'logout', 'help', 'home', 'server', 'client', 'accept', 'deny',
+		'content', 'type', 'length', 'copyright', 'welcome', 'authorized', 'use', 'only',
+		'warning', 'access', 'system', 'device', 'running', 'details', 'service',
+		'version', 'release', 'build', 'patch', 'level', 'protocol', 'transport',
+		'layer', 'port', 'tcp', 'udp', 'ttl', 'window', 'sync', 'ack', 'sequence',
+		'class', 'method', 'status', 'state', 'cipher', 'key', 'algorithm', 'session',
+		'cookie', 'token', 'auth', 'pass', 'password', 'username', 'credential',
+		'microsoft', 'corporation', 'inc', 'ltd', 'gmt', 'utc', 'mon', 'tue',
+		'wed', 'thu', 'fri', 'sat', 'sun', 'jan', 'feb', 'mar', 'apr', 'may',
+		'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec', 'netbios', 'workgroup',
+		'domain', 'master', 'browser', 'os', 'cpe', 'fingerprint', 'aggregator',
+		'cisco', 'huawei', 'juniper', // Vendors are okay if version present, but alone are noise
+		'unknown', 'none', 'null', 'undefined',
+		'ssh', 'telnet', 'http', 'https', 'sshd', 'soho'
+	]);
+
 	// Load relevant keywords
 	const relevantKeywords = getAllKeywords();
 
@@ -182,7 +201,7 @@ const extractServicesFromReport = (report = []) => {
 	const keywordList = Array.from(relevantKeywords).filter(kw => kw.length > 1);
 	const whitelistRegex = new RegExp(
 		keywordList.map(kw => `\\b${kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).join('|'),
-		'i'
+		'ig'
 	);
 
 	// Generic regex for "Name/Version" pattern (e.g. Apache/2.4.52, nginx/1.18)
@@ -200,9 +219,11 @@ const extractServicesFromReport = (report = []) => {
 		// Cleanup version
 		v = v.replace(/[\.\-]+$/, '');
 
-		const key = `${s}:${v}:${port}`;
+		const key = `${s}:${v}`; // Ignore port for uniqueness (User Request: "make them appear only once")
 		if (!unique.has(key)) {
 			unique.set(key, { service: s, version: v, port, source });
+		} else {
+			// Optional: Update port if needed, or just keep first found
 		}
 	};
 
@@ -232,9 +253,9 @@ const extractServicesFromReport = (report = []) => {
 	// 3. Scan all text in the report
 	const startTime = Date.now();
 
-	// Function to scan a string for all types of matches
 	const scanString = (str, portContext = '') => {
 		if (!str || typeof str !== 'string') return;
+		console.log('DEBUG SCAN:', str.substring(0, 30));
 		const lower = str.toLowerCase();
 
 		// A. Generic "Name/Version" Regex
@@ -253,13 +274,31 @@ const extractServicesFromReport = (report = []) => {
 			}
 		}
 
+		// Custom: TP-LINK Model Extraction
+		// Extract "TP-LINK TD-W8968"
+		const tplinkMatch = str.match(/TP-LINK\s+([A-Z0-9\-]+)/i);
+		if (tplinkMatch) {
+			const model = tplinkMatch[1];
+			// User wants "TP-LINK TD-W8968" as the extracted word/service
+			// We treat the whole string "TP-LINK TD-W8968" as the service name, and version 'Any'
+			// This allows us to search for CVEs for this specific model if needed, or just display it.
+			addFinding(`TP-LINK ${model}`, 'Any', 'custom-tplink', portContext);
+		}
+
+
+
 
 		// B. Whitelist Match
-		let wMatch = whitelistRegex.exec(lower);
-		if (wMatch) {
+		let wMatch;
+		whitelistRegex.lastIndex = 0;
+		while ((wMatch = whitelistRegex.exec(lower)) !== null) {
 			const keyword = wMatch[0];
 			if (relevantKeywords.has(keyword)) {
-				const ver = extractVersion(str);
+				// Attempt to extract version "near" the keyword? 
+				// Use the substring STARTING from the keyword match to avoid picking up previous versions
+				// e.g. "UPnP 1.6.19 (Linux 2.6.36)" -> finding "Linux" should search "Linux 2.6.36", not the whole string
+				const substring = str.substring(wMatch.index);
+				const ver = extractVersion(substring);
 				addFinding(keyword, ver, 'whitelist', portContext);
 			}
 		}
@@ -270,23 +309,7 @@ const extractServicesFromReport = (report = []) => {
 			const token = tokens[i];
 			if (token.length < 3) continue;
 
-			// Expanded Stop Words / False Positives List
-			const STOP_WORDS = new Set([
-				'date', 'time', 'echo', 'start', 'end', 'files', 'data', 'user', 'admin', 'root',
-				'login', 'logout', 'help', 'home', 'server', 'client', 'accept', 'deny',
-				'content', 'type', 'length', 'copyright', 'welcome', 'authorized', 'use', 'only',
-				'warning', 'access', 'system', 'device', 'running', 'details', 'service',
-				'version', 'release', 'build', 'patch', 'level', 'protocol', 'transport',
-				'layer', 'port', 'tcp', 'udp', 'ttl', 'window', 'sync', 'ack', 'sequence',
-				'class', 'method', 'status', 'state', 'cipher', 'key', 'algorithm', 'session',
-				'cookie', 'token', 'auth', 'pass', 'password', 'username', 'credential',
-				'microsoft', 'corporation', 'inc', 'ltd', 'gmt', 'utc', 'mon', 'tue',
-				'wed', 'thu', 'fri', 'sat', 'sun', 'jan', 'feb', 'mar', 'apr', 'may',
-				'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec', 'netbios', 'workgroup',
-				'domain', 'master', 'browser', 'os', 'cpe', 'fingerprint', 'aggregator',
-				'cisco', 'huawei', 'juniper', // Vendors are okay if version present, but alone are noise
-				'unknown', 'none', 'null', 'undefined'
-			]);
+			// Expanded Stop Words / False Positives List - MOVED TO TOP SCOPE
 
 			if (cachedProducts.has(token)) {
 				if (STOP_WORDS.has(token)) {
@@ -297,7 +320,24 @@ const extractServicesFromReport = (report = []) => {
 					// Strict requirement: found product must have a version to be useful
 					// Exception: Well-known software (linux, windows) might not always have version in the immediate token but we try
 					const isOS = ['linux', 'windows', 'android', 'ios', 'macos'].includes(token);
-					const ver = extractVersion(str);
+
+					// Fix: Find where this token appears in the string to extract version *after* it
+					// This prevents "Linux" at the end of a string from picking up a version at the start
+					const tokenIndex = str.toLowerCase().indexOf(token);
+					// For Linux, we want to be very specific to avoid "1.6.19" from "Portable SDK... 1.6.19"
+					// We search specifically for "Linux <version>" pattern in the substring
+					let searchStr = tokenIndex >= 0 ? str.substring(tokenIndex) : str;
+
+					if (token === 'linux') {
+						// Regex to find "Linux 2.6.36" etc specifically
+						const linuxVerMatch = searchStr.match(/Linux\s+([0-9]+\.[0-9]+(?:\.[0-9]+)*)/i);
+						if (linuxVerMatch) {
+							addFinding(token, linuxVerMatch[1], 'dynamic-linux-specific', portContext);
+							continue;
+						}
+					}
+
+					const ver = extractVersion(searchStr);
 
 					if (ver) {
 						addFinding(token, ver, 'dynamic', portContext);
@@ -312,8 +352,7 @@ const extractServicesFromReport = (report = []) => {
 		}
 	};
 
-	// D. Port Heuristics (Explicit Check) - DISABLED as per user request
-	/*
+	// D. Port Heuristics (Explicit Check)
 	const portsEntry = report.find((entry) => entry?.title === 'PORTS');
 	if (portsEntry) {
 		let portData = Array.isArray(portsEntry.dataToDisplay)
@@ -341,6 +380,9 @@ const extractServicesFromReport = (report = []) => {
 			const tokens = (item.title || '').toLowerCase().split(/[\s\/\[\]\(\),;=]+/);
 			tokens.forEach(token => {
 				if (token.length < 3) return;
+				// STRICT STOP WORD CHECK
+				if (STOP_WORDS.has(token)) return;
+
 				// Check against NVD or Whitelist
 				const isProduct = cachedProducts.has(token) || relevantKeywords.has(token);
 				if (isProduct) {
@@ -365,7 +407,6 @@ const extractServicesFromReport = (report = []) => {
 			}
 		});
 	}
-	*/
 
 	// Negative phrases to ignore in values
 	const SKIP_PHRASES = [
@@ -417,7 +458,7 @@ const extractServicesFromReport = (report = []) => {
 	};
 
 	(report || []).forEach((entry, idx) => {
-		if (entry.title === 'PORTS') return; // Handled explicitly (DISABLED NOW)
+		// if (entry.title === 'PORTS') return; // Handled explicitly above
 
 		// For all other sections:
 		// User Rule: "I don't want names like firewall... instead I want their value field"
